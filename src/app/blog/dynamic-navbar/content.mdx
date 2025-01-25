@@ -1,0 +1,127 @@
+import { BlogLayout } from "@/components/BlogLayout";
+
+import { CodeWindow } from "@/components/CodeWindow";
+
+export const meta = {
+  date: "2024-08-18",
+  title: "Dynamic NavBar With React",
+  description:
+    "The `NavBar` component features a scroll-responsive menu with toggle functionality, active link styling, and a language switcher.",
+  image:
+    "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  tags: ["NavBar"],
+};
+
+export default (props) => <BlogLayout meta={meta} {...props} />;
+
+his NavBar component is a responsive navigation bar that toggles visibility based on user scroll behavior and interaction with a menu button. It includes features like:
+
+Hide on Scroll: The navigation bar hides when the user scrolls down and reappears when scrolling up.
+Menu Toggle: A menu button (IoMenu/AiOutlineClose) toggles the visibility of the navigation links, switching between a compact and expanded menu state.
+Overflow Control: When the menu is open, the body overflow is set to 'hidden' to prevent background scrolling.
+Active Link Styling: The navigation links highlight the active page based on the current URL.
+Language Switcher: A language switcher is included for multi-language support.
+This component is designed to be mobile-friendly and responsive, with a collapsible menu for smaller screens.
+
+## Code Snippet
+
+<CodeWindow title="nav.js">
+
+```TSX
+import React, { Fragment, useEffect, useState } from "react";
+import { IoMenu } from "react-icons/io5";
+import { AiOutlineClose } from "react-icons/ai";
+
+
+const NavBar = () => {
+  const [bigMenu, setBigMenu] = useState(false);
+  const [hideNav, setHideNav] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > window.innerHeight) {
+        setHideNav(currentScrollY > lastScrollTop);
+      } else {
+        setHideNav(false);
+      }      setLastScrollTop(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollTop]);
+
+
+  const menuChange = () => {
+    setBigMenu(!bigMenu);
+  }
+  useEffect(()=>{
+    if (!bigMenu) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  },[bigMenu]);
+
+  return (
+    <Fragment>
+      <header className={`header ${hideNav ? 'hide' : ''}`}>
+      <nav >
+            <img src={logo} alt="logo" />
+          <ul className={bigMenu?"bigMenu":undefined}>
+
+
+            <li>
+            <NavLink className={window.location.pathname === "/" ? "active" : undefined}  to="/" >الصفحة الرئيسية</NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/who" >من نحن</NavLink>
+            </li>
+            <li>
+              <NavLink to="/services">خدمات الشركات</NavLink>
+            </li>
+            <li>
+              <NavLink to="/people">خدمات الافراد</NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/team">فريق العمل</NavLink>
+            </li>
+            <li>
+              <NavLink to="/sucsses">شركاء النجاح</NavLink>
+            </li>
+            {/* <li>
+              <NavLink to="/liabrary">المكتبة الرقمية</NavLink>
+            </li> */}
+            <li>
+              <NavLink to="/mediaCentre">المركز الاعلامي</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">اتصل بنا</NavLink>
+            </li>
+          </ul>
+        <LanguageSwitcher/>
+        </nav>
+
+        { (
+          bigMenu ? (
+            <AiOutlineClose onClick={menuChange} size={30} />
+          ) : (
+            <IoMenu onClick={menuChange} className="menu" size={48} />
+          )
+        ) }
+        {/* <CiSearch className="search" size={30} /> */}
+      </header>
+    </Fragment>
+  );
+};
+
+export default NavBar;
+
+```
+
+</CodeWindow>

@@ -8,10 +8,11 @@ import {
   IconCheckbox,
   IconCircleCheckFilled,
 } from "@tabler/icons-react";
+import DownloadCv from "./DownloadCv";
 
 export const WorkHistory = () => {
   return (
-    <div>
+    <div className="">
       {timeline.map((item, index) => (
         <div
           className="flex md:flex-row flex-col space-y-10 md:space-y-0 space-x-10 my-20 relative"
@@ -38,6 +39,7 @@ export const WorkHistory = () => {
           </div>
         </div>
       ))}
+      <DownloadCv />
     </div>
   );
 };

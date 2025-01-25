@@ -56,7 +56,7 @@ export const Sidebar = () => {
 
               <Navigation setOpen={setOpen} />
             </div>
-            <div className="flex space-x-2 items-center justify-center mb-4">
+            {/* <div className="flex space-x-2 items-center justify-center mb-4">
               <button
                 onClick={() => handleLocale("en")}
                 className={`border w-12 p-2 font-bold rounded-md text-sm ${
@@ -73,7 +73,7 @@ export const Sidebar = () => {
               >
                 Ar
               </button>
-            </div>
+            </div> */}
 
             <div onClick={() => isMobile() && setOpen(false)}>
               <Badge href="/resume" text="Read Resume" />
