@@ -1,0 +1,42 @@
+{
+  "tabTitles": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "Heading": "Hello there! I'm Seaf Gamel",
+    "paragraph": "I'm a full-stack developer that loves",
+    "Highlight": "building products",
+    "Paragraph3": " and web apps that can impact millions of lives",
+    "Paragraph4": "I'm a junior software engineer with",
+    "Highlight2": "1.5 years of experience",
+    "Paragraph5": " building scalable web apps that are performance optimized and good looking",
+    "Heading2": "What I've been working on"
+  },
+  "Products":{   
+      "100Heading": "Conflict Solution",  
+      "101Paragraph": "A design and development studio that focuses on building quality apps",
+      "110span": "Nextjs",
+      "111span": "Tailwindcss",
+      "1100Heading": "Conflict Solution",
+      "1101Paragraph": "A design and development studio that focuses on building quality apps",
+      "1110span": "Nextjs",
+      "1111span": "Tailwindcss",
+      "2100Heading": "Algochurn",
+      "2101Paragraph": "Practice for technical interviews with hands on coding challenges",
+      "2110span": "Nextjs",
+      "2111span": "Tailwindcss",
+      "3100Heading": "Moonbeam",
+      "3101Paragraph": "Never write from scratch again with Moonbeam, your AI first writing tool",
+      "3110span": "Nextjs",
+      "3111span": "Tailwindcss",
+      "4100Heading": "Tailwind Master Kit",
+      "4101Paragraph": "A beautiful and comprehensive Tailwind CSS s library for building modern websites and applications",
+      "4110span": "Nextjs",
+      "4111span": "Tailwindcss"
+    
+  }
+}
+
+

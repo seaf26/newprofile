@@ -1,0 +1,20 @@
+{
+    "tabTitles": {
+        "home": "الرئيسية",
+        "about": "حول",
+        "contact": "اتصل"
+      },
+    "HomePage": {
+      "Heading": "مرحبًا! أنا سيف جميل",
+      "Container.2.h1": "مرحبًا بالعالم!",
+      "Container.3.Paragraph.0": "أنا مطور برمجيات متكامل يحب",
+      "Container.3.Paragraph.1": " ",
+      "Container.3.Paragraph.2.Highlight": "بناء المنتجات",
+      "Container.3.Paragraph.3": " وتطبيقات الويب التي يمكن أن تؤثر على ملايين الأرواح",
+      "Container.4.Paragraph.0": "أنا مهندس برمجيات مبتدئ مع",
+      "Container.4.Paragraph.1": " ",
+      "Container.4.Paragraph.2.Highlight": "1.5 سنوات من الخبرة",
+      "Container.4.Paragraph.3": " في بناء تطبيقات الويب القابلة للتوسع والتي تتميز بالأداء الأمثل والمظهر الجيد.",
+      "Container.5.Heading": "ما الذي كنت أعمل عليه"
+    }
+}
