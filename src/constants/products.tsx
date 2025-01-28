@@ -66,6 +66,70 @@ export const products = [
     ),
   },
   {
+    href: "https://educhains.live/",
+    title: "Edu Chain",
+    description:
+      "An advanced learning platform built with modern technologies, featuring live Zoom sessions, recorded lectures, robust course management, and a fully responsive design focused on enhancing user experience.",
+    thumbnail: educhain,
+    images: [educhain, educhain1],
+    stack: ["Laravel", "Tailwindcss"],
+    slug: "edu-chain",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <ul>
+            <li>
+              Admin panel with full control over courses, instructors, users,
+              and financial management.
+            </li>
+            <li>
+              Instructor panel to manage courses, track student progress, access
+              homework, create new sessions, and monitor earnings.
+            </li>
+            <li>
+              User-friendly interface for students to enroll in courses, access
+              live Zoom sessions, and view recorded sessions.
+            </li>
+            <li>
+              Advanced filtering options by categories, course bundles, and
+              upcoming courses.
+            </li>
+            <li>
+              Additional features like quizzes, certificates, assignments,
+              forums, reviews, and notifications for an engaging learning
+              experience.
+            </li>
+            <li>
+              Fully responsive design with a focus on accessibility and user
+              experience.
+            </li>
+          </ul>
+        </p>
+        <p>
+          My Role:
+          <br />
+          Developed the complete web app, including admin, instructor, and user
+          functionalities, as well as integration with Zoom for live sessions
+          and recordings.
+        </p>
+        <p>
+          Challenges & Solutions:
+          <br />
+          Optimized performance for live sessions and ensured secure access to
+          recorded content. Streamlined course management and payment flow for a
+          seamless experience.
+        </p>
+        <p>
+          Outcome:
+          <br />A robust, feature-rich learning platform with seamless course
+          management, user engagement tools, and responsive design tailored for
+          all device types.
+        </p>
+      </div>
+    ),
+  },
+  {
     href: "https://inom-techs.com/",
     title: "Inom Techs",
     description:
@@ -438,7 +502,6 @@ export const products = [
       </div>
     ),
   },
-
 
   // {
   //   href: "https://tailwindmasterkit.com",
