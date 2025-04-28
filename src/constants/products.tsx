@@ -20,141 +20,99 @@ import outseller from "../../public/images/outseller.png";
 import outseller1 from "../../public/images/outseller1.png";
 import educhain from "../../public/images/educhain.png";
 import educhain1 from "../../public/images/educhain2.png";
-
+import thumbnail from "../../public/images/thumnail.png";
+import landseller from "../../public/images/landseller.png";
+import aboutseller from "../../public/images/aboutseller.png";
+import seller54 from "../../public/images/seller-22.png";
+import filament from "../../public/images/filament.png";
+import dark from "../../public/images/chat-filament.png";
+import inovet from "../../public/images/inovent.png";
+import inovet1 from "../../public/images/inovent1.png";
+import fanzvar from "../../public/images/fanzvar.jpg";
 export const products = [
+
   {
-    href: "https://outseller.inom-techs.com/",
-    title: "Out Seller",
+    href: "",
+    title: "Fanzvar",
     description:
-      "An eCommerce site built with Laravel, offering product comparisons, smooth checkout process.and a fully responsive, visually appealing design.",
-    thumbnail: outseller,
-    images: [outseller, outseller1],
-    stack: ["Laravel", "Tailwindcss"],
-    slug: "out-seller",
+      "Fanzvar is a comprehensive platform that brings together social, entertainment, business, development, and services for local, regional, and global sports fans — with a special focus on football enthusiasts from different clubs and nations worldwide.",
+    thumbnail: fanzvar,
+    images: [ fanzvar],
+    video:dark,
+    stack: ["PHP", "Laravel", "Filament", "Reverb", "Livewire", "Flutter"],
+    slug: "fanzvar",
     content: (
       <div>
         <p>
           Key Features:
-          <ul>
-            <li>
-              Product comparison, loved product tracking, and add-to-cart
-              functionality.
-            </li>
-            <li>User login/register.</li>
-            <li>advanced filters by category, price, and color.</li>
-            <li>Full-responsive design with a focus on user experience.</li>
-          </ul>{" "}
+          <br />
+          - Multi-user system with real-time project-specific chat rooms.<br />
+          - Content center with full multilingual support (Arabic, Hebrew, English).<br />
+          - Advanced employee management (roles, project assignments, approvals).<br />
+          - Ticketing and help desk system for inquiries and project issues.<br />
+          - Attendance tracking with QR-based GPS check-in and shift management.<br />
+          - Financial module for debt and payment tracking across users and projects.<br />
+          - Custom user approval workflows and flexible role assignment.<br />
+          - Complete multilingual admin dashboard with full control via Filament.
         </p>
         <p>
           My Role:
           <br />
-          Developed the entire eCommerce platform, including user
-          authentication, product management, and payment integration.
-        </p>{" "}
+          I developed key core features including the competitions module, reels (media sharing), and the real-time chatting system. I also implemented JWT-based authentication for secure API access, built the full admin panel using Filament, and integrated notification systems for both users and admins.
+        </p>
         <p>
-          Challenges & Solutions:
+          Target Audience:
           <br />
-          Handled performance issues with product comparisons and optimized
-          payment flow for seamless transactions.
-        </p>{" "}
+          Sports fans, contractors, consultants, project managers, and administrative teams seeking an all-in-one platform to manage communities, communication, and operational workflows.
+        </p>
         <p>
-          Outcome:
-          <br />A feature-rich eCommerce site with robust product management,
-          smooth user experience, and a responsive design.{" "}
-        </p>{" "}
+          Challenges and Solutions:
+          <br />
+          Handling multilingual content while maintaining an intuitive UX was a major challenge. I developed a dynamic language switching system with seamless localization for both frontend and admin sections.<br />
+          Real-time chat and notification delivery were implemented using Laravel Reverb and WebSockets, ensuring smooth cross-region communication.<br />
+          To solve timezone-related attendance recording issues, I standardized time handling based on user location and server synchronization.
+        </p>
       </div>
     ),
   },
+  
   {
-    href: "https://educhains.live/",
-    title: "Edu Chain",
+    href: "https://kenz.localproductsnetwork.com/admin",
+    title: "Kenz Contractor and Consultant Management",
     description:
-      "An advanced learning platform built with modern technologies, featuring live Zoom sessions, recorded lectures, robust course management, and a fully responsive design focused on enhancing user experience.",
-    thumbnail: educhain,
-    images: [educhain, educhain1],
-    stack: ["Laravel", "Tailwindcss"],
-    slug: "edu-chain",
+      "Kenz is a powerful, multi-role contractor and consultant management system tailored for large-scale operational control. The system includes multi-user access, real-time chat, multilingual support, employee and content center management, ticketing, attendance, debt tracking, and more. Built with responsiveness and scalability in mind, it ensures a seamless experience across devices and user roles.",
+    thumbnail: thumbnail,
+    images: [dark, filament],
+    stack: ["PHP", "Filament", "LiveWire", "Laravel", "Reverb"],
+    slug: "Kenz",
     content: (
       <div>
         <p>
           Key Features:
-          <ul>
-            <li>
-              Admin panel with full control over courses, instructors, users,
-              and financial management.
-            </li>
-            <li>
-              Instructor panel to manage courses, track student progress, access
-              homework, create new sessions, and monitor earnings.
-            </li>
-            <li>
-              User-friendly interface for students to enroll in courses, access
-              live Zoom sessions, and view recorded sessions.
-            </li>
-            <li>
-              Advanced filtering options by categories, course bundles, and
-              upcoming courses.
-            </li>
-            <li>
-              Additional features like quizzes, certificates, assignments,
-              forums, reviews, and notifications for an engaging learning
-              experience.
-            </li>
-            <li>
-              Fully responsive design with a focus on accessibility and user
-              experience.
-            </li>
-          </ul>
+          <br />
+          - Multi-user system with real-time chat for project-specific communication.<br />
+          - Content center management with full support for Arabic, Hebrew, and English.<br />
+          - Employee management with role and project assignments.<br />
+          - Ticketing system for project-related inquiries and issues.<br />
+          - Attendance tracking with GPS check-in and shift management.<br />
+          - Debt management and financial tracking for users and projects.<br />
+          - User approval workflow before login and custom role assignment.<br />
+          - Multilingual dashboard and full admin control via Filament.
         </p>
         <p>
           My Role:
+          <br />I developed the complete system architecture and implementation—from designing the database structure and user roles to integrating multilingual support and real-time features.
+        </p>
+        <p>
+          Target Audience:
           <br />
-          Developed the complete web app, including admin, instructor, and user
-          functionalities, as well as integration with Zoom for live sessions
-          and recordings.
+          Contractors, consultants, project managers, and administrative teams seeking a robust platform to manage teams, tasks, and communication in one place.
         </p>
         <p>
-          Challenges & Solutions:
+          Challenges and Solutions:
           <br />
-          Optimized performance for live sessions and ensured secure access to
-          recorded content. Streamlined course management and payment flow for a
-          seamless experience.
-        </p>
-        <p>
-          Outcome:
-          <br />A robust, feature-rich learning platform with seamless course
-          management, user engagement tools, and responsive design tailored for
-          all device types.
-        </p>
-      </div>
-    ),
-  },
-  {
-    href: "https://inom-techs.com/",
-    title: "Inom Techs",
-    description:
-      "Inom-Techs is a modern company profile website for a programming and marketing firm, featuring dynamic animations, localization with cookies, and dark mode support for an enhanced user experience.",
-    thumbnail: inom,
-    images: [inom, inom1],
-    stack: ["Nextjs", "Tailwindcss"],
-    slug: "inom-techs",
-    content: (
-      <div>
-        <p>
-          Key Features: <br /> Localization powered by cookies, ensuring the
-          website adapts to user preferences. Dark mode support for better
-          accessibility and aesthetics. Visually appealing and modern design
-          with heavy animations for an engaging experience.
-        </p>
-        <p>
-          My Role:
-          <br /> I handled the entire project from design to deployment,
-          ensuring a flawless and functional user interface and experience.
-        </p>
-        <p>
-          Target Audience: <br />
-          Consumers and businesses looking for programming and marketing
-          services.
+          Managing multilingual content while keeping the UI intuitive was challenging. I implemented a dynamic language switcher and content localization for all user-facing and admin sections.<br />
+          Real-time communication was achieved using Laravel Reverb for WebSocket integration. I also tackled timezone-related attendance issues to ensure accurate tracking across regions.
         </p>
       </div>
     ),
@@ -196,6 +154,118 @@ export const products = [
           Using my experience, I resolved these issues to ensure a flawless user
           experience.
         </p>{" "}
+      </div>
+    ),
+  },
+  {
+    href: "https://inovet.inom-techs.com",
+    title: "Inovent ",
+    description:
+      "Inovent is a website designed for a virtual events platform. It leverages virtual reality (VR) and Unity, allowing users to navigate with a keyboard or VR headset and create immersive environments. The platform enhances event engagement by providing an interactive and dynamic experience for attendees.",
+    thumbnail: inovet,
+    images: [inovet, inovet1],
+    stack: ["ReactJs Vite", "AOS", "CSS"],
+    slug: "inovent",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />A web application for virtual events utilizing technologies like
+          virtual reality VR and Unity. Users can navigate using a keyboard or
+          VR headset and create their own virtual environments. Designed to
+          enhance event engagement by attracting a larger audience.
+        </p>
+        <p>
+          My Role:
+          <br />I developed the entire front-end of the project, handling UI
+          design, interactivity, and responsiveness.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Event organizers and attendees looking for an immersive virtual event
+          experience.
+        </p>
+        <p>
+          Challenges and Solutions:
+          <br />
+          Ensuring smooth performance and responsiveness across various devices
+          was a key challenge. By optimizing assets and leveraging efficient
+          rendering techniques, I provided a seamless user experience.
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    href: "https://outseller.tech",
+    title: "Out Seller landing page ",
+    description:
+      "Conflict Solution is a professional portfolio website designed for a law company. The website features eight distinct pages that showcase the firm's services and expertise. Built with responsiveness in mind, it ensures a seamless browsing experience across devices.",
+    thumbnail: landseller,
+    images: [aboutseller, seller54],
+    stack: ["Next", "Type Script", "Tailwindcss"],
+    slug: "out-seller-landing-page",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          A modern, visually engaging landing page designed to present Outsellers with
+          clarity and impact. The layout includes clean sections for hero, services,
+          about, and contact, all crafted to guide the visitor smoothly through the content.
+          Fully responsive and optimized for all screen sizes.
+        </p>
+        <p>
+          My Role:
+          <br />
+          I designed and built the entire landing page from scratch, focusing on clean UI,
+          responsive structure, and subtle scroll-based animations to keep the user engaged.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Businesses and clients looking to understand the Outsellers brand and get in touch
+          through a professional online presence.
+        </p>
+        <p>
+          Challenges & Solutions:
+          <br />
+          One challenge was achieving a consistent design across different browsers and screen
+          sizes. I utilized flexible grid layouts and tested responsiveness thoroughly to ensure
+          pixel-perfect design everywhere.
+        </p>
+      </div>
+    )
+    ,
+  },
+  {
+    href: "https://inom-techs.com/",
+    title: "Inom Techs",
+    description:
+      "Inom-Techs is a modern company profile website for a programming and marketing firm, featuring dynamic animations, localization with cookies, and dark mode support for an enhanced user experience.",
+    thumbnail: inom,
+    images: [inom, inom1],
+    stack: ["Nextjs", "Tailwindcss"],
+    slug: "inom-techs",
+    content: (
+      <div>
+        <p>
+          Key Features: <br /> Localization powered by cookies, ensuring the
+          website adapts to user preferences. Dark mode support for better
+          accessibility and aesthetics. Visually appealing and modern design
+          with heavy animations for an engaging experience.
+        </p>
+        <p>
+          My Role:
+          <br /> I handled the entire project from design to deployment,
+          ensuring a flawless and functional user interface and experience.
+        </p>
+        <p>
+          Target Audience: <br />
+          Consumers and businesses looking for programming and marketing
+          services.
+        </p>
       </div>
     ),
   },
