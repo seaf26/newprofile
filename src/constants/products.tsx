@@ -37,8 +37,8 @@ export const products = [
     description:
       "Fanzvar is a comprehensive platform that brings together social, entertainment, business, development, and services for local, regional, and global sports fans — with a special focus on football enthusiasts from different clubs and nations worldwide.",
     thumbnail: fanzvar,
-    images: [ fanzvar],
-    video:dark,
+    images: [fanzvar],
+    video: dark,
     stack: ["PHP", "Laravel", "Filament", "Reverb", "Livewire", "Flutter"],
     slug: "fanzvar",
     content: (
@@ -75,7 +75,7 @@ export const products = [
       </div>
     ),
   },
-  
+
   {
     href: "https://kenz.localproductsnetwork.com/admin",
     title: "Kenz Contractor and Consultant Management",
@@ -320,6 +320,49 @@ export const products = [
           <br />A comprehensive eLearning platform with an intuitive teacher
           interface, live session capabilities, and powerful admin features for
           financial tracking and user management.{" "}
+        </p>{" "}
+      </div>
+    ),
+  },
+  {
+    href: "https://outseller.inom-techs.com/",
+    title: "Out Seller",
+    description:
+      "An eCommerce site built with Laravel, offering product comparisons, smooth checkout process.and a fully responsive, visually appealing design.",
+    thumbnail: outseller,
+    images: [outseller, outseller1],
+    stack: ["Laravel", "Tailwindcss"],
+    slug: "out-seller",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <ul>
+            <li>
+              Product comparison, loved product tracking, and add-to-cart
+              functionality.
+            </li>
+            <li>User login/register.</li>
+            <li>advanced filters by category, price, and color.</li>
+            <li>Full-responsive design with a focus on user experience.</li>
+          </ul>{" "}
+        </p>
+        <p>
+          My Role:
+          <br />
+          Developed the entire eCommerce platform, including user
+          authentication, product management, and payment integration.
+        </p>{" "}
+        <p>
+          Challenges & Solutions:
+          <br />
+          Handled performance issues with product comparisons and optimized
+          payment flow for seamless transactions.
+        </p>{" "}
+        <p>
+          Outcome:
+          <br />A feature-rich eCommerce site with robust product management,
+          smooth user experience, and a responsive design.{" "}
         </p>{" "}
       </div>
     ),
