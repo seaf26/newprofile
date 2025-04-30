@@ -85,7 +85,7 @@ export const products = [
     "Inomhub is the official landing page for a parent company that aligns and connects multiple businesses under one unified brand. Built using PHP and Bootstrap, the website presents a professional and responsive interface, showcasing the group's vision and services. It includes full localization support and an integrated email system.",
    thumbnail: inomhub,
     images: [inomhub, inomhub2],
-    stack: ["ReactJs Vite", "AOS", "CSS"],
+    stack: [ "PHP","AOS", "Bootstrap" ],
     slug: "inomhub",
     content: (
       <div>
