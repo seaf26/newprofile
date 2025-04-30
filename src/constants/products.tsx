@@ -29,8 +29,11 @@ import dark from "../../public/images/chat-filament.png";
 import inovet from "../../public/images/inovent.png";
 import inovet1 from "../../public/images/inovent1.png";
 import fanzvar from "../../public/images/fanzvar.jpg";
+import inomhub from "../../public/images/inomhub.png";
+import inomhub2 from "../../public/images/inomhub2.png";
 export const products = [
 
+  //fanzvar
   {
     href: "",
     title: "Fanzvar",
@@ -75,7 +78,42 @@ export const products = [
       </div>
     ),
   },
-
+  {
+    href: "https://inomhub.com",
+    title: "Inomhub ",
+    description:
+    "Inomhub is the official landing page for a parent company that aligns and connects multiple businesses under one unified brand. Built using PHP and Bootstrap, the website presents a professional and responsive interface, showcasing the group's vision and services. It includes full localization support and an integrated email system.",
+   thumbnail: inomhub,
+    images: [inomhub, inomhub2],
+    stack: ["ReactJs Vite", "AOS", "CSS"],
+    slug: "inomhub",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          A corporate landing page for Inomhub, a company that brings together multiple businesses under one unified structure. Built with PHP and Bootstrap, the site is responsive, multilingual, and optimized for a professional online presence.
+        </p>
+        <p>
+          My Role:
+          <br />
+          I was responsible for the complete design, development, deployment, and infrastructure setup of the website. This included creating the UI/UX, implementing multilingual support, configuring the email server, and managing deployment.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Business stakeholders, partners, and clients seeking to understand and engage with the group of companies under Inomhub.
+        </p>
+        <p>
+          Challenges and Solutions:
+          <br />
+          Ensuring clean architecture, smooth deployment, and localization for multiple languages was essential. I addressed this by using lightweight PHP for the backend, Bootstrap for responsive design, and proper server configuration for both email and multilingual routing.
+        </p>
+      </div>
+    ),
+    
+  },
+  //kenz
   {
     href: "https://kenz.localproductsnetwork.com/admin",
     title: "Kenz Contractor and Consultant Management",
@@ -117,6 +155,7 @@ export const products = [
       </div>
     ),
   },
+  //cslf
   {
     href: "https://cslf.sa",
     title: "Conflict Solution",
