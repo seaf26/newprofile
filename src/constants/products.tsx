@@ -35,7 +35,7 @@ export const products = [
 
   //fanzvar
   {
-    href: "",
+    href: "https://fanzvar.inom-techs.com/admin",
     title: "Fanzvar",
     description:
       "Fanzvar is a comprehensive platform that brings together social, entertainment, business, development, and services for local, regional, and global sports fans — with a special focus on football enthusiasts from different clubs and nations worldwide.",
