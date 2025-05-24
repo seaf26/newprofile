@@ -31,6 +31,9 @@ import inovet1 from "../../public/images/inovent1.png";
 import fanzvar from "../../public/images/fanzvar.jpg";
 import inomhub from "../../public/images/inomhub.png";
 import inomhub2 from "../../public/images/inomhub2.png";
+import newseller from "../../public/images/newseller1.png";
+import newseller1 from "../../public/images/newseller2.png";
+
 export const products = [
 
   //fanzvar
@@ -82,10 +85,10 @@ export const products = [
     href: "https://inomhub.com",
     title: "Inomhub ",
     description:
-    "Inomhub is the official landing page for a parent company that aligns and connects multiple businesses under one unified brand. Built using PHP and Bootstrap, the website presents a professional and responsive interface, showcasing the group's vision and services. It includes full localization support and an integrated email system.",
-   thumbnail: inomhub,
+      "Inomhub is the official landing page for a parent company that aligns and connects multiple businesses under one unified brand. Built using PHP and Bootstrap, the website presents a professional and responsive interface, showcasing the group's vision and services. It includes full localization support and an integrated email system.",
+    thumbnail: inomhub,
     images: [inomhub, inomhub2],
-    stack: [ "PHP","AOS", "Bootstrap" ],
+    stack: ["PHP", "AOS", "Bootstrap"],
     slug: "inomhub",
     content: (
       <div>
@@ -111,7 +114,7 @@ export const products = [
         </p>
       </div>
     ),
-    
+
   },
   //kenz
   {
@@ -237,10 +240,9 @@ export const products = [
   },
 
   {
-    href: "https://outseller.tech",
+    href: "http://outseller.rkmait.com/",
     title: "Out Seller landing page ",
-    description:
-      "Conflict Solution is a professional portfolio website designed for a law company. The website features eight distinct pages that showcase the firm's services and expertise. Built with responsiveness in mind, it ensures a seamless browsing experience across devices.",
+    description:"Out Seller is a modern, responsive landing page designed to showcase the Outsellers brand. It features a clean layout with sections for hero, services, about, and contact, all optimized for a professional online presence.",
     thumbnail: landseller,
     images: [aboutseller, seller54],
     stack: ["Next", "Type Script", "Tailwindcss"],
@@ -309,6 +311,48 @@ export const products = [
     ),
   },
   {
+    href: "http://outseller.tech",
+    title: "Seller-tech",
+    description:
+      "Conflict Solution is a professional portfolio website designed for a law company. The website features eight distinct pages that showcase the firm's services and expertise. Built with responsiveness in mind, it ensures a seamless browsing experience across devices.",
+    thumbnail: newseller,
+    images: [newseller, newseller1],
+    stack: ["Next", "Type Script", "Tailwindcss"],
+    slug: "out-seller-landing-page",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          A modern, visually engaging landing page designed to present Outsellers with
+          clarity and impact. The layout includes clean sections for hero, services,
+          about, and contact, all crafted to guide the visitor smoothly through the content.
+          Fully responsive and optimized for all screen sizes.
+        </p>
+        <p>
+          My Role:
+          <br />
+          I designed and built the entire landing page from scratch, focusing on clean UI,
+          responsive structure, and subtle scroll-based animations to keep the user engaged.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Businesses and clients looking to understand the Outsellers brand and get in touch
+          through a professional online presence.
+        </p>
+        <p>
+          Challenges & Solutions:
+          <br />
+          One challenge was achieving a consistent design across different browsers and screen
+          sizes. I utilized flexible grid layouts and tested responsiveness thoroughly to ensure
+          pixel-perfect design everywhere.
+        </p>
+      </div>
+    )
+    ,
+  },
+  {
     href: "https://outseller.inom-techs.com/",
     title: "Edu Chain",
     description:
@@ -367,7 +411,7 @@ export const products = [
     href: "https://outseller.inom-techs.com/",
     title: "Out Seller",
     description:
-      "An eCommerce site built with Laravel, offering product comparisons, smooth checkout process.and a fully responsive, visually appealing design.",
+      "Out Seller is a feature-rich eCommerce platform built with Laravel and Tailwind CSS, offering advanced product management, user authentication, and a responsive design for an optimal shopping experience.",
     thumbnail: outseller,
     images: [outseller, outseller1],
     stack: ["Laravel", "Tailwindcss"],
@@ -578,7 +622,7 @@ export const products = [
     ),
   },
   {
-    href: "",
+    href: "https://al-gamel.rkmait.com",
     title: "E-commerce Laravel",
     description:
       "An eCommerce admin dashboard built with Laravel and Tailwind CSS, featuring category-product relationships and API export for efficient data management using MySQL.",
