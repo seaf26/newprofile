@@ -33,17 +33,47 @@ import inomhub from "../../public/images/inomhub.png";
 import inomhub2 from "../../public/images/inomhub2.png";
 import newseller from "../../public/images/newseller1.png";
 import newseller1 from "../../public/images/newseller2.png";
+import nourtha from "../../public/images/noutha-tech.png";
+import nourtha2 from "../../public/images/noutha-tech2.png";
+import fanvar from "../../public/images/fanvarl.png";
 
 export const products = [
-
+  //nourtha-tech-v1
+   {
+    href: "https://nourtha-tech.inomhub.com",
+    title: "Nourtha-Tech",
+    description:
+      "Nourtha-Tech is a cutting-edge landing page designed for a leading tech company in Saudi Arabia. Built entirely from scratch, it showcases the company's innovative solutions, services, and vision. The website features a modern, responsive design with full localization support, ensuring accessibility for both Arabic and English-speaking audiences. Developed using React-Vite and Tailwind CSS, it delivers a seamless user experience and highlights the company's commitment to technological excellence.",
+    thumbnail: nourtha,
+    images: [nourtha, nourtha2],
+    stack: ["React", "AOS", "Tailwindcss"],
+    slug: "nourtha-tech",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          - Fully responsive design optimized for all devices.
+          <br />
+          - Multilingual support for Arabic and English.
+          <br />
+          - Integrated email system for seamless communication.
+          <br />
+          - Built with React-Vite and Tailwind CSS for performance and scalability.
+          <br />
+          - Represents the company's innovative approach to technology in Saudi Arabia.
+        </p>
+      </div>
+    ),
+  },
   //fanzvar
   {
-    href: "https://fanzvar.inom-techs.com/admin",
+    href: "https://fanzvar.rkmait.com",
     title: "Fanzvar",
     description:
       "Fanzvar is a comprehensive platform that brings together social, entertainment, business, development, and services for local, regional, and global sports fans — with a special focus on football enthusiasts from different clubs and nations worldwide.",
-    thumbnail: fanzvar,
-    images: [fanzvar],
+    thumbnail: fanvar,
+    images: [fanzvar,fanvar],
     video: dark,
     stack: ["PHP", "Laravel", "Filament", "Reverb", "Livewire", "Flutter"],
     slug: "fanzvar",
@@ -81,6 +111,7 @@ export const products = [
       </div>
     ),
   },
+  //inomhub
   {
     href: "https://inomhub.com",
     title: "Inomhub ",
@@ -118,7 +149,7 @@ export const products = [
   },
   //kenz
   {
-    href: "https://kenz.localproductsnetwork.com/admin",
+    href: "https://kenz.rkmait.com/admin",
     title: "Kenz Contractor and Consultant Management",
     description:
       "Kenz is a powerful, multi-role contractor and consultant management system tailored for large-scale operational control. The system includes multi-user access, real-time chat, multilingual support, employee and content center management, ticketing, attendance, debt tracking, and more. Built with responsiveness and scalability in mind, it ensures a seamless experience across devices and user roles.",
@@ -242,7 +273,7 @@ export const products = [
   {
     href: "http://outseller.rkmait.com/",
     title: "Out Seller landing page ",
-    description:"Out Seller is a modern, responsive landing page designed to showcase the Outsellers brand. It features a clean layout with sections for hero, services, about, and contact, all optimized for a professional online presence.",
+    description: "Out Seller is a modern, responsive landing page designed to showcase the Outsellers brand. It features a clean layout with sections for hero, services, about, and contact, all optimized for a professional online presence.",
     thumbnail: landseller,
     images: [aboutseller, seller54],
     stack: ["Next", "Type Script", "Tailwindcss"],
@@ -318,7 +349,7 @@ export const products = [
     thumbnail: newseller,
     images: [newseller, newseller1],
     stack: ["Next", "Type Script", "Tailwindcss"],
-    slug: "out-seller-landing-page",
+    slug: "out-seller",
     content: (
       <div>
         <p>
