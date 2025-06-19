@@ -61,7 +61,7 @@ export const products = [
           <br />
           - Built with React-Vite and Tailwind CSS for performance and scalability.
           <br />
-          - Represents the company's innovative approach to technology in Saudi Arabia.
+          - Represents the company&apos;s innovative approach to technology in Saudi Arabia.
         </p>
       </div>
     ),
