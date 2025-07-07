@@ -384,7 +384,7 @@ export const products = [
     ,
   },
   {
-    href: "https://outseller.inom-techs.com/",
+    href: "educhains.live",
     title: "Edu Chain",
     description:
       "An eLearning platform with multiple user roles (Admin, Teacher, User). Teachers manage courses and grades, while Zoom integration supports live sessions.",
