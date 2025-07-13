@@ -35,9 +35,121 @@ import newseller from "../../public/images/newseller1.png";
 import newseller1 from "../../public/images/newseller2.png";
 import nourtha from "../../public/images/noutha-tech.png";
 import nourtha2 from "../../public/images/noutha-tech2.png";
+import nourthav2 from "../../public/images/noutha-techv2-2.png";
+import nourthav22 from "../../public/images/noutha-techv2.png";
 import fanvar from "../../public/images/fanvarl.png";
+import polrais from "../../public/images/polraismarine.png";
+import polraismarien from "../../public/images/polraismarine2.png";
+import dental1 from "../../public/images/dental.png";
+import dental2 from "../../public/images/dentalosrais2.png";
+
+import { title } from "process";
 
 export const products = [
+
+  //dental osrais
+  {
+    href: "https://osiris.rkmait.com/",
+    title: "Dental Osrais",
+    description:
+      "Dental Osrais is a multilingual dental website available in English, French, and Spanish. It features four main pages: Home, About, Prices, and Contact. I received the UI from my team and handled the full implementation, including building the project, adding animations, and ensuring full responsiveness across devices.",
+    thumbnail: dental1,
+    images: [dental1, dental2],
+    stack: ["React", "Tailwindcss", "Multilingual", "Animation"],
+    slug: "dental-osrais",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          - Multilingual support: English, French, and Spanish.<br />
+          - Four core pages: Home, About, Prices, and Contact.<br />
+          - Responsive design for all devices.<br />
+          - Smooth animations for enhanced user experience.<br />
+        </p>
+        <p>
+          My Role:
+          <br />
+          I received the UI from my team and built the entire project, implementing the design, adding animations, and ensuring the site is fully responsive.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Dental clients and visitors seeking information and services in multiple languages.
+        </p>
+      </div>
+    ),
+  },
+
+  //polrais marine
+  {
+    href:"https://polarismarines.com/",
+    title:"polaris-marines",
+    description:
+      "Polrais Marine is a corporate website for a marine company specializing in building ships locally and exporting them worldwide. The site is designed and developed using React, with a strong focus on performance, SEO, and accessibility, achieving a perfect score on Google Insights. I handled the full setup, including deployment and domain acquisition.",
+    thumbnail: polrais,
+    images: [polrais, polraismarien],
+    stack: ["React", "Tailwindcss", "SEO", "Accessibility"],
+    slug: "polrais-marine",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          - Corporate website for a marine company specializing in shipbuilding and global export.<br />
+          - Designed and built with React for optimal performance and maintainability.<br />
+          - Enhanced SEO and accessibility, achieving 100% scores on Google Insights.<br />
+          - Fully responsive and optimized for all devices.<br />
+        </p>
+        <p>
+          My Role:
+          <br />
+          I was responsible for the entire project lifecycle: design, development, performance optimization, SEO, accessibility, deployment, and domain setup.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          International clients and partners seeking reliable shipbuilding and export services.
+        </p>
+      </div>
+    ),
+
+
+
+  },
+  //nourtha-tech v2
+  {
+    href: "https://nourtha-techs.inomhub.com/",
+    title: "Nourtha-Tech V2",
+    description:
+      "Nourtha-Tech V2 is a professional portfolio website for a Saudi tech company, featuring 8 distinct pages that highlight the company's services, solutions, and vision. The site is fully responsive and supports both Arabic and English localization.",
+    thumbnail: nourthav22,
+    images: [nourthav2, nourthav22],
+    stack: ["React", "Tailwindcss"],
+    slug: "nourtha-tech-v2",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          - 8 pages showcasing company services and solutions.<br />
+          - Fully responsive design for all devices.<br />
+          - Multilingual support for Arabic and English.<br />
+          - Modern UI built with React and Tailwind CSS.<br />
+        </p>
+        <p>
+          My Role:
+          <br />
+          I built the entire project from scratch, handling design, development, and deployment using React and Tailwind CSS.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Clients and partners seeking innovative tech solutions in Saudi Arabia.
+        </p>
+      </div>
+    ),
+  },
   //nourtha-tech-v1
  {
     href: "https://nourtha-tech.inomhub.com",
@@ -384,7 +496,7 @@ export const products = [
     ,
   },
   {
-    href: "educhains.live",
+    href: "http://educhains.live",
     title: "Edu Chain",
     description:
       "An eLearning platform with multiple user roles (Admin, Teacher, User). Teachers manage courses and grades, while Zoom integration supports live sessions.",
