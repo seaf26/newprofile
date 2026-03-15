@@ -68,6 +68,6 @@ export const Products = () => {
     </div>
   );
   const keys = generateKeys(content);
-  console.log("keys: ", JSON.stringify(keys, null, 2)); // Properly log the keys
+  // console.log("keys: ", JSON.stringify(keys, null, 2)); // Properly log the keys
   return <>{content}</>;
 };

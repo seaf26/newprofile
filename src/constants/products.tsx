@@ -42,17 +42,354 @@ import polrais from "../../public/images/polraismarine.png";
 import polraismarien from "../../public/images/polraismarine2.png";
 import dental1 from "../../public/images/dental.png";
 import dental2 from "../../public/images/dentalosrais2.png";
+import kemedar from "../../public/images/kemedar.png";
+import ar2 from "../../public/images/ar2.png";
+import ar from "../../public/images/ar.png";
+import medad from "../../public/images/medad.png";
+import medad2 from "../../public/images/medad2.png";
+import igc from "../../public/images/igc.png";
+import igc2 from "../../public/images/igc2.png";
+import alnasser from "../../public/images/alnasser.png"
+import elnasserback from "../../public/images/elnasserback.png"
+
+
 
 import { title } from "process";
 
 export const products = [
+//   elnasser - backend dashboard & logistics
+  {
+    href: "",
+    title: "Elnasser Backend & Logistics Engine",
+    description:
+      "A highly sophisticated, enterprise-grade e-commerce and logistics backend built on the Laravel ecosystem. Expertly handles multi-leveled product taxonomy, complex logistics, scalable API architectures, and real-time data processing.",
+    thumbnail: elnasserback,
+    images: [elnasserback],
+    stack: [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Redis/Queues",
+        "Python",
+        "Nginx",
+        "DevOps"
+    ],
+    slug: "elnasser-backend-dashboard",
+    content: (
+        <div className="space-y-6">
+            <p>
+                <strong>Executive Overview</strong>
+                <br />
+                The project represents a highly sophisticated, enterprise-grade e-commerce and logistics backend built on the Laravel ecosystem. The system expertly handles multi-leveled product taxonomy, complex logistics (Internal Delivery Payroll, Delivery Fee Engine), scalable API architectures for a vast cross-platform ecosystem (powering 3 distinct mobile apps: Vendor, Delivery, and User, alongside a comprehensive e-commerce website), dynamic customer loyalty and tier programs, and real-time backend processing.
+            </p>
+            <p>
+                <strong>Core Technical Architecture & System Mechanics</strong>
+                <br />
+                - <em>Database & Query Optimization:</em> Re-engineered the category system to move away from rigid 2-level nested loops to infinite-depth traversal using WITH RECURSIVE SQL CTEs. Implemented cache invalidation strategies using tree-version mechanics with Laravel Cache. Managed zero-downtime database schema upgrades for large datasets.
+                <br />
+                - <em>Background Jobs & Queue Processing:</em> Real-time Trash System and Bulk Delete implementations running via Laravel Queues. Handlers softly delete nested subcategories recursively and flush storage/cache. UI maintains live interactivity using AJAX polling.
+                <br />
+                - <em>Comprehensive API Layer:</em> Microservices-influenced separation using strict headers. Token-based auth via Bearer Tokens, secure password storage, and Multi-Factor/OTP. Robust Postman Collections integration dynamically exported via custom Artisan commands.
+            </p>
+            <p>
+                <strong>Comprehensive Feature Set & Technical Implementations</strong>
+                <br />
+                - <em>Advanced Recursive Category Architecture:</em> Unlimited subcategory levels allowing complex taxonomies. Implemented descendant/ancestor lookups using SQL CTEs. Deep API endpoints return nested tree JSON structures up to specific depths.
+                <br />
+                - <em>Category Groups API:</em> Admin customizable "Groups" for dynamic storefront features, allowing carousels containing categories and products natively with level type mapping embedded in API responses.
+                <br />
+                - <em>Mobile App V1 API Expansion:</em> Full checkout capability, offline payments via multipart/form-data with up to 5MB screenshot uploads, campaign tracking, and robust filtering rules for items intercepting dynamic query scopes. New checkout summary engine computes live projections for coupons and loyalty points.
+                <br />
+                - <em>Delivery Man Ecosystem & Payroll Engine:</em> Completely functional dispatch and delivery portal. Solved critical visibility bugs for non-vehicular constrained orders. Internal delivery teams earn base monthly salaries plus task commissions while freelancers earn dynamic commissions. Engineered Delivery Fee APIs simulating costs based on distance, volumetric weight, and vehicle mappings.
+                <br />
+                - <em>Delivery & Payment Admin Reports:</em> Dedicated reporting interfaces for delivery operations powered by Eloquent Scopes to resolve complex SQL ambiguity. Devised advanced Seeders demonstrating operational behavior logical flows.
+                <br />
+                - <em>Customer Loyalty, Tiers, & Referral Setup:</em> Automated tiered setups (Bronze, Silver, Gold). End-to-end payload routing dynamically pushes user preferences configuration directly to the settings vault. Integrated helper logic calculating validation tokens natively at the payload layer without persistent coupon entities. Rigorous PHPUnit testing sequence to validate the calculations.
+                <br />
+                - <em>SMS OTP Authentication Protocol:</em> Frictionless phone-based onboarding. Tri-state workflow handler mapping logic into new, old, and existing states seamlessly without premature auth token issuance.
+                <br />
+                - <em>Frontend Images & Dashboard Theme Overrides:</em> System-wide native theme handling supporting layout partial overrides. Devilled an intelligent CSS pyramid grid engine visualizing category structures depending on recursive depth calculations. Dedicated UI bridging image payload storage dynamically.
+                <br />
+                - <em>Admin Tools & Python Automation:</em> Orchestrated python helpers alongside PHP loops (seed_products.py, fetch_product_images.py, cleanup_category_images.py) destroying orphaned blobs, handling mass api integration (Pixabay), and processing raw file dumps efficiently.
+            </p>
+            <p>
+                <strong>DevOps & Systems Architecture</strong>
+                <br />
+                - <em>Nginx & Network Tuning:</em> Deployed infrastructure overhauls interacting with Nginx server blocks, upgrading client_max_body_size thresholds allowing large payload delivery natively.
+                <br />
+                - <em>Advanced SSH Deployment Protocols:</em> Developed custom single-process tar stream protocols bypassing SSH packet loss, cleanly deploying 1.2 GB of unstructured binary image data natively to server nodes. 
+            </p>
+            <p>
+                <strong>My Role & Technical Impact</strong>
+                <br />
+                Operating as the Lead Backend & DevOps Engineer, I architected this massive Laravel backend to scale. My work heavily centered on advanced database engineering, scalable API designs, caching, seamless queuing algorithms, and comprehensive DevOps pipeline optimizations.
+            </p>
+        </div>
+    ),
+  },
+//   alnasser - ecommerce landing page
+  {
+    href: "https://www.alnasser.eg/",
+    title: "Al Nasser E-Commerce Landing Page",
+    description:
+      "A high-performance, modern landing page serving as the primary digital storefront for Al Nasser, a prominent retail brand with over 52 branches in Egypt and Kuwait. Designed to balance impression-driven brand storytelling with conversion optimization.",
+    thumbnail: alnasser,
+    images: [alnasser],
+    stack: [
+        "React 18",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Three.js",
+        "AOS",
+        "i18n"
+    ],
+    slug: "alnasser-ecommerce",
+    content: (
+        <div>
+            <p>
+                Key Features & Technical Architecture:
+                <br />
+                - High-Performance Animations: Opted for lightweight AOS over Framer Motion to drastically reduce bundle size and protect frame rates during smooth scrolling.
+                <br />
+                - Immersive WebGL Backgrounds: Engineered a custom FloatingLines environment in Three.js, deferring context loading to guarantee ultra-fast Largest Contentful Paint (LCP) times.
+                <br />
+                - Complete Localization: Fully integrated i18n supporting both English and Arabic with robust Right-to-Left (RTL) capability for the GCC market.
+                <br />
+                - Custom Theme Engine: Developed a lightweight useThemeMode hook to manage light/dark mode transitions mapped natively to OS preferences.
+                <br />
+            </p>
+            <p>
+                My Role & Implementation:
+                <br />
+                I architected and built the entire front-end of this project from scratch using React 18, establishing our team&apos;s first step into level-A corporate systems. I strictly enforced performance best practices—utilizing React.memo, aggressive code splitting for below-the-fold content via Suspense, and modern asset optimizations—resulting in a flawless 100/100 performance and SEO score across all Google Lighthouse tests.
+            </p>
+            <p>
+                Project Status & Scale:
+                <br />
+                This successfully completed Phase One serves a brand with 2+ million active cross-platform followers. It anchors the ecosystem before the rollout of the full e-commerce module, management dashboard, and mobile applications.
+            </p>
+        </div>
+    ),
+  },
+//   igc - influencer & ugc campaign platform
+  {
+    href: "https://igc-rklp.vercel.app/",
+    title: "IGC (Influencer & UGC Campaign Platform)",
+    description:
+      "A modern, high-performance two-sided marketplace designed to bridge the gap between Brands and UGC creators/Influencers. Engineered with React Router v7 and TypeScript, it features complex multi-tenant onboarding flows and integrated ROI analytics.",
+    thumbnail: igc,
+    images: [igc, igc2],
+    stack: [
+      "React Router v7",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Zustand",
+      "Formik",
+      "Yup",
+      "Recharts",
+      "Docker",
+    ],
+    slug: "igc-influencer-ugc-platform",
+    content: (
+      <div>
+        <p>
+          Key Modules & Features:
+          <br />
+          - Smart Onboarding: Dual-persona flow for both Brands and Influencers with secure OTP verification.
+          <br />
+          - UGC Marketplace: Advanced discovery engine with granular filtering and integrated real-time messaging.
+          <br />
+          - ROI & Analytics: Integrated suite featuring custom ROI calculators and performance tracking via Recharts.
+          <br />
+          - Transactional Integrity: End-to-end secure checkout system and robust order management.
+          <br />
+        </p>
+        <p>
+          Architectural Highlights:
+          <br />
+          - SSR & Performance: Built on React Router v7 (formerly Remix) for superior SEO and faster First Contentful Paint.
+          <br />
+          - Modular Logic: Utilizes Zustand for lightweight state management and custom React Contexts for complex global workflows.
+          <br />
+          - Sophisticated UI: High-performance micro-animations powered by Framer Motion and responsive layouts via Tailwind CSS.
+          <br />
+        </p>
+        <p>
+          My Role & Implementation:
+          <br />
+          As the Lead Front-End Developer, I was responsible for transforming complex Figma designs into a high-performance, responsive UI. I architected the front-end structure using React Router v7, integrated all API endpoints, and ensured a seamless, type-safe data flow across the dual-persona marketplace.
+        </p>
+      </div>
+    ),
+  },
+//   medad - contracting company website
+  {
+    href: "https://medad-alqemam.com.sa/",
+    title: "Medad Al Qemam Contracting",
+    description:
+      "A premium, highly interactive corporate web platform for a leading contracting company in Saudi Arabia. Built to showcase civil engineering capabilities and large-scale infrastructure projects, it features immersive 3D/WebGL experiences that reflect the company's alignment with Saudi Vision 2030.",
+    thumbnail: medad,
+    images: [medad, medad2],
+    stack: [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "GSAP",
+      "Three.js",
+      "i18next",
+      "Supabase",
+    ],
+    slug: "medad-alqemam",
+    content: (
+      <div>
+        <p>
+          Key Features & Implementations:
+          <br />
+          - Dynamic Hero Sections: Custom WebGL components using Three.js for a premium, interactive first impression.
+          <br />
+          - Scroll & Micro-Animations: Leveraged GSAP for complex scroll-based reveal effects, enhancing user engagement without sacrificing performance.
+          <br />
+          - Built-in Internationalization (i18n): Seamless language switching with robust RTL (Right-to-Left) support tailored for the Saudi market.
+          <br />
+          - Performance Optimization: Utilized Vite bundling, lazy loading, and asset optimization for lightning-fast HMR and minified production builds.
+          <br />
+        </p>
+        <p>
+          My Role & Implementation:
+          <br />
+          I built the entire front-end of this corporate platform from scratch using React 18 and TypeScript. My primary focus was on creating a premium, high-performance user experience, integrating complex Three.js and GSAP animations while ensuring the site maintains exceptional loading speeds and responsiveness.
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Clients and partners seeking cutting-edge civil engineering and large-scale infrastructure services within the Kingdom of Saudi Arabia.
+        </p>
+      </div>
+    ),
+  },
+//   ar dish - 3d model visualizer
+  {
+    href: "https://dsm-ar.com/",
+    title: "AR Dish & 3D Model Visualizer",
+    description:
+      "An immersive, cross-platform Augmented Reality (AR) experience that allows users to view high-fidelity 3D models of food dishes, furniture, and anatomy directly from their web browser. Built from scratch, focusing on high-performance 3D rendering.",
+    thumbnail: ar,
+    images: [ar,ar2],
+    stack: [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn-ui",
+      "React Query",
+      "WebXR"
+    ],
+    slug: "ar-dish-visuals",
+    content: (
+      <div>
+        <p>
+          Key Features:
+          <br />
+          - Interactive 3D Viewer utilizing Google&apos;s &lt;model-viewer&gt; for rotating, zooming, and panning 3D models directly on the web.
+          <br />
+          - Cross-Platform AR: Leverages Apple native AR Quick Look (.usdz) for iOS and Google Scene Viewer (.glb) for Android.
+          <br />
+          - Animation Playback: Built-in controls for playing, pausing, and cycling through 3D model animations directly from the UI.
+          <br />
+          - Dynamic Data Rendering: Utilizes a TypeScript catalog to dynamically render products, descriptions, and nutritional facts.
+          <br />
+          - PBR Environments: Adjusted exposure and shadow intensities for photorealistic model blending into real-world spaces.
+          <br />
+        </p>
+        <p>
+          My Role & Technical Approach:
+          <br />
+          I built the entire front-end of this project from scratch. Beyond the complex 3D integration, I focused heavily on performance and SEO, successfully achieving a perfect 100 score on Google Lighthouse. I optimized the model assets (.glb, .usdz, and .webp) and established a seamless bridge between vanilla web components and the React ecosystem.
+          <br />
+        </p>
+        <p>
+          Target Audience:
+          <br />
+          Restaurants, furniture retainers, and businesses seeking to elevate customer engagement via an immersive 3D/AR catalog.
+        </p>
+      </div>
+    ),
+  },
+//   kemedar - real estate platform
+  {
+    href: "https://kemedar.com/",
+    title: "Kemedar — Real Estate Platform",
+    description:
+      "Kemedar is a secure, comprehensive, and global real estate platform that revolutionizes how people buy and rent properties across the world. Born out of a real-life struggle with fraudulent agents and localized platforms, Kemedar organizes and secures the entire real estate process, eliminating borders, language barriers, and security risks.",
+    thumbnail: kemedar, // replace with your actual image import
+    images: [kemedar], // replace with your actual images
+    stack: [
+      "Laravel",
+      "Blade Templates",
+      "MongoDB",
+      "Microservices",
+      "Docker",
+      "Nginx",
+      "JWT",
+    ],
+    slug: "kemedar-real-estate-platform",
+    content: (
+      <div>
+        <p>
+          From a Personal Crisis to a Global Solution:
+          <br />
+          Every great innovation is born from a true human need. For Kemedar, it started six years ago with a distressed phone call at 7:00 PM. A ruined summer trip due to a fraudulent agent awakened a pressing need for an application that completely secures, organizes, and facilitates the real estate process.
+          <br />
+          <br />
+          At first, the vision was local. But after hearing stories of people struggling to buy apartments abroad due to war, language barriers, and localized tech limitations, the direction became clear: Kemedar had to be global.
+          <br />
+          <br />
+          After more than five years of relentless dedication, Kemedar was born alongside its comprehensive ecosystem featuring Kemetro, Kemmeta, and Kemedar Academy. Built by a passionate family of creative minds with over 150 years of combined experience, it provides a trusted, secure, and borderless real estate ecosystem.
+          <br />
+          <br />
+        </p>
+        <p>
+          Key Technical Features:
+          <br />
+          - Microservices Architecture for high scalability.
+          <br />
+          - MongoDB for managing complex and large-scale property data.
+          <br />
+          - API Gateway with JWT Authentication for secure access.
+          <br />
+          - Achieved a 40% improvement in overall response times.
+          <br />
+          - Fully containerized deployment using Docker and Nginx.
+          <br />
+        </p>
+        <p>
+          My Role & Technical Focus:
+          <br />
+          Working as a Backend Developer within a large engineering team, I specialized in Laravel-side development. My primary mission was to modernize the platform by refactoring ancient legacy code, decoupling "spaghetti" logic into clean, scalable microservices, and optimizing data flow between the Laravel core and MongoDB.
+          <br />
+          <br />
+        </p>
+        <p>
+          Challenges & Solutions:
+          <br />
+          A major challenge in this project was navigating and modernizing an extensive, aging legacy codebase that had grown over five years. The system contained heavily entangled sections—often referred to as "spaghetti code"—making it incredibly difficult to edit or scale without breaking existing features. 
+          <br />
+          <br />
+          My focus was on aggressively refactoring these critical bottlenecks. By dissecting the legacy logic and establishing clean, microservices-oriented boundaries, I successfully reduced technical debt, stabilized the architecture, and significantly improved the maintainability of the codebase for the entire team.
+        </p>
+      </div>
+    ),
+  },
 
   //dental osrais
   {
-    href: "https://osiris.rkmait.com/",
-    title: "Dental Osrais",
+    href: "https://3dentix.com/",
+    title: "3Dentix",
     description:
-      "Dental Osrais is a multilingual dental website available in English, French, and Spanish. It features four main pages: Home, About, Prices, and Contact. I received the UI from my team and handled the full implementation, including building the project, adding animations, and ensuring full responsiveness across devices.",
+      "3Dentix is a multilingual dental website available in English, French, and Spanish. It features four main pages: Home, About, Prices, and Contact. I received the UI from my team and handled the full implementation, including building the project, adding animations, and ensuring full responsiveness across devices.",
     thumbnail: dental1,
     images: [dental1, dental2],
     stack: ["React", "Tailwindcss", "Multilingual", "Animation"],
@@ -62,20 +399,26 @@ export const products = [
         <p>
           Key Features:
           <br />
-          - Multilingual support: English, French, and Spanish.<br />
-          - Four core pages: Home, About, Prices, and Contact.<br />
-          - Responsive design for all devices.<br />
-          - Smooth animations for enhanced user experience.<br />
+          - Multilingual support: English, French, and Spanish.
+          <br />
+          - Four core pages: Home, About, Prices, and Contact.
+          <br />
+          - Responsive design for all devices.
+          <br />
+          - Smooth animations for enhanced user experience.
+          <br />
         </p>
         <p>
           My Role:
-          <br />
-          I received the UI from my team and built the entire project, implementing the design, adding animations, and ensuring the site is fully responsive.
+          <br />I received the UI from my team and built the entire project,
+          implementing the design, adding animations, and ensuring the site is
+          fully responsive.
         </p>
         <p>
           Target Audience:
           <br />
-          Dental clients and visitors seeking information and services in multiple languages.
+          Dental clients and visitors seeking information and services in
+          multiple languages.
         </p>
       </div>
     ),
@@ -83,8 +426,8 @@ export const products = [
 
   //polrais marine
   {
-    href:"https://polarismarines.com/",
-    title:"polaris-marines",
+    href: "https://polarismarines.com/",
+    title: "polaris-marines",
     description:
       "Polrais Marine is a corporate website for a marine company specializing in building ships locally and exporting them worldwide. The site is designed and developed using React, with a strong focus on performance, SEO, and accessibility, achieving a perfect score on Google Insights. I handled the full setup, including deployment and domain acquisition.",
     thumbnail: polrais,
@@ -96,26 +439,32 @@ export const products = [
         <p>
           Key Features:
           <br />
-          - Corporate website for a marine company specializing in shipbuilding and global export.<br />
-          - Designed and built with React for optimal performance and maintainability.<br />
-          - Enhanced SEO and accessibility, achieving 100% scores on Google Insights.<br />
-          - Fully responsive and optimized for all devices.<br />
+          - Corporate website for a marine company specializing in shipbuilding
+          and global export.
+          <br />
+          - Designed and built with React for optimal performance and
+          maintainability.
+          <br />
+          - Enhanced SEO and accessibility, achieving 100% scores on Google
+          Insights.
+          <br />
+          - Fully responsive and optimized for all devices.
+          <br />
         </p>
         <p>
           My Role:
-          <br />
-          I was responsible for the entire project lifecycle: design, development, performance optimization, SEO, accessibility, deployment, and domain setup.
+          <br />I was responsible for the entire project lifecycle: design,
+          development, performance optimization, SEO, accessibility, deployment,
+          and domain setup.
         </p>
         <p>
           Target Audience:
           <br />
-          International clients and partners seeking reliable shipbuilding and export services.
+          International clients and partners seeking reliable shipbuilding and
+          export services.
         </p>
       </div>
     ),
-
-
-
   },
   //nourtha-tech v2
   {
@@ -132,26 +481,31 @@ export const products = [
         <p>
           Key Features:
           <br />
-          - 8 pages showcasing company services and solutions.<br />
-          - Fully responsive design for all devices.<br />
-          - Multilingual support for Arabic and English.<br />
-          - Modern UI built with React and Tailwind CSS.<br />
+          - 8 pages showcasing company services and solutions.
+          <br />
+          - Fully responsive design for all devices.
+          <br />
+          - Multilingual support for Arabic and English.
+          <br />
+          - Modern UI built with React and Tailwind CSS.
+          <br />
         </p>
         <p>
           My Role:
-          <br />
-          I built the entire project from scratch, handling design, development, and deployment using React and Tailwind CSS.
+          <br />I built the entire project from scratch, handling design,
+          development, and deployment using React and Tailwind CSS.
         </p>
         <p>
           Target Audience:
           <br />
-          Clients and partners seeking innovative tech solutions in Saudi Arabia.
+          Clients and partners seeking innovative tech solutions in Saudi
+          Arabia.
         </p>
       </div>
     ),
   },
   //nourtha-tech-v1
- {
+  {
     href: "https://nourtha-tech.inomhub.com",
     title: "Nourtha-Tech",
     description:
@@ -171,9 +525,10 @@ export const products = [
           <br />
           - Integrated email system for seamless communication.
           <br />
-          - Built with React-Vite and Tailwind CSS for performance and scalability.
-          <br />
-          - Represents the company&apos;s innovative approach to technology in Saudi Arabia.
+          - Built with React-Vite and Tailwind CSS for performance and
+          scalability.
+          <br />- Represents the company&apos;s innovative approach to
+          technology in Saudi Arabia.
         </p>
       </div>
     ),
@@ -185,7 +540,7 @@ export const products = [
     description:
       "Fanzvar is a comprehensive platform that brings together social, entertainment, business, development, and services for local, regional, and global sports fans — with a special focus on football enthusiasts from different clubs and nations worldwide.",
     thumbnail: fanvar,
-    images: [fanzvar,fanvar],
+    images: [fanzvar, fanvar],
     video: dark,
     stack: ["PHP", "Laravel", "Filament", "Reverb", "Livewire", "Flutter"],
     slug: "fanzvar",
@@ -194,31 +549,53 @@ export const products = [
         <p>
           Key Features:
           <br />
-          - Multi-user system with real-time project-specific chat rooms.<br />
-          - Content center with full multilingual support (Arabic, Hebrew, English).<br />
-          - Advanced employee management (roles, project assignments, approvals).<br />
-          - Ticketing and help desk system for inquiries and project issues.<br />
-          - Attendance tracking with QR-based GPS check-in and shift management.<br />
-          - Financial module for debt and payment tracking across users and projects.<br />
-          - Custom user approval workflows and flexible role assignment.<br />
-          - Complete multilingual admin dashboard with full control via Filament.
+          - Multi-user system with real-time project-specific chat rooms.
+          <br />
+          - Content center with full multilingual support (Arabic, Hebrew,
+          English).
+          <br />
+          - Advanced employee management (roles, project assignments,
+          approvals).
+          <br />
+          - Ticketing and help desk system for inquiries and project issues.
+          <br />
+          - Attendance tracking with QR-based GPS check-in and shift management.
+          <br />
+          - Financial module for debt and payment tracking across users and
+          projects.
+          <br />
+          - Custom user approval workflows and flexible role assignment.
+          <br />- Complete multilingual admin dashboard with full control via
+          Filament.
         </p>
         <p>
           My Role:
-          <br />
-          I developed key core features including the competitions module, reels (media sharing), and the real-time chatting system. I also implemented JWT-based authentication for secure API access, built the full admin panel using Filament, and integrated notification systems for both users and admins.
+          <br />I developed key core features including the competitions module,
+          reels (media sharing), and the real-time chatting system. I also
+          implemented JWT-based authentication for secure API access, built the
+          full admin panel using Filament, and integrated notification systems
+          for both users and admins.
         </p>
         <p>
           Target Audience:
           <br />
-          Sports fans, contractors, consultants, project managers, and administrative teams seeking an all-in-one platform to manage communities, communication, and operational workflows.
+          Sports fans, contractors, consultants, project managers, and
+          administrative teams seeking an all-in-one platform to manage
+          communities, communication, and operational workflows.
         </p>
         <p>
           Challenges and Solutions:
           <br />
-          Handling multilingual content while maintaining an intuitive UX was a major challenge. I developed a dynamic language switching system with seamless localization for both frontend and admin sections.<br />
-          Real-time chat and notification delivery were implemented using Laravel Reverb and WebSockets, ensuring smooth cross-region communication.<br />
-          To solve timezone-related attendance recording issues, I standardized time handling based on user location and server synchronization.
+          Handling multilingual content while maintaining an intuitive UX was a
+          major challenge. I developed a dynamic language switching system with
+          seamless localization for both frontend and admin sections.
+          <br />
+          Real-time chat and notification delivery were implemented using
+          Laravel Reverb and WebSockets, ensuring smooth cross-region
+          communication.
+          <br />
+          To solve timezone-related attendance recording issues, I standardized
+          time handling based on user location and server synchronization.
         </p>
       </div>
     ),
@@ -237,27 +614,34 @@ export const products = [
       <div>
         <p>
           Key Features:
-          <br />
-          A corporate landing page for Inomhub, a company that brings together multiple businesses under one unified structure. Built with PHP and Bootstrap, the site is responsive, multilingual, and optimized for a professional online presence.
+          <br />A corporate landing page for Inomhub, a company that brings
+          together multiple businesses under one unified structure. Built with
+          PHP and Bootstrap, the site is responsive, multilingual, and optimized
+          for a professional online presence.
         </p>
         <p>
           My Role:
-          <br />
-          I was responsible for the complete design, development, deployment, and infrastructure setup of the website. This included creating the UI/UX, implementing multilingual support, configuring the email server, and managing deployment.
+          <br />I was responsible for the complete design, development,
+          deployment, and infrastructure setup of the website. This included
+          creating the UI/UX, implementing multilingual support, configuring the
+          email server, and managing deployment.
         </p>
         <p>
           Target Audience:
           <br />
-          Business stakeholders, partners, and clients seeking to understand and engage with the group of companies under Inomhub.
+          Business stakeholders, partners, and clients seeking to understand and
+          engage with the group of companies under Inomhub.
         </p>
         <p>
           Challenges and Solutions:
           <br />
-          Ensuring clean architecture, smooth deployment, and localization for multiple languages was essential. I addressed this by using lightweight PHP for the backend, Bootstrap for responsive design, and proper server configuration for both email and multilingual routing.
+          Ensuring clean architecture, smooth deployment, and localization for
+          multiple languages was essential. I addressed this by using
+          lightweight PHP for the backend, Bootstrap for responsive design, and
+          proper server configuration for both email and multilingual routing.
         </p>
       </div>
     ),
-
   },
   //kenz
   {
@@ -274,29 +658,46 @@ export const products = [
         <p>
           Key Features:
           <br />
-          - Multi-user system with real-time chat for project-specific communication.<br />
-          - Content center management with full support for Arabic, Hebrew, and English.<br />
-          - Employee management with role and project assignments.<br />
-          - Ticketing system for project-related inquiries and issues.<br />
-          - Attendance tracking with GPS check-in and shift management.<br />
-          - Debt management and financial tracking for users and projects.<br />
-          - User approval workflow before login and custom role assignment.<br />
-          - Multilingual dashboard and full admin control via Filament.
+          - Multi-user system with real-time chat for project-specific
+          communication.
+          <br />
+          - Content center management with full support for Arabic, Hebrew, and
+          English.
+          <br />
+          - Employee management with role and project assignments.
+          <br />
+          - Ticketing system for project-related inquiries and issues.
+          <br />
+          - Attendance tracking with GPS check-in and shift management.
+          <br />
+          - Debt management and financial tracking for users and projects.
+          <br />
+          - User approval workflow before login and custom role assignment.
+          <br />- Multilingual dashboard and full admin control via Filament.
         </p>
         <p>
           My Role:
-          <br />I developed the complete system architecture and implementation—from designing the database structure and user roles to integrating multilingual support and real-time features.
+          <br />I developed the complete system architecture and
+          implementation—from designing the database structure and user roles to
+          integrating multilingual support and real-time features.
         </p>
         <p>
           Target Audience:
           <br />
-          Contractors, consultants, project managers, and administrative teams seeking a robust platform to manage teams, tasks, and communication in one place.
+          Contractors, consultants, project managers, and administrative teams
+          seeking a robust platform to manage teams, tasks, and communication in
+          one place.
         </p>
         <p>
           Challenges and Solutions:
           <br />
-          Managing multilingual content while keeping the UI intuitive was challenging. I implemented a dynamic language switcher and content localization for all user-facing and admin sections.<br />
-          Real-time communication was achieved using Laravel Reverb for WebSocket integration. I also tackled timezone-related attendance issues to ensure accurate tracking across regions.
+          Managing multilingual content while keeping the UI intuitive was
+          challenging. I implemented a dynamic language switcher and content
+          localization for all user-facing and admin sections.
+          <br />
+          Real-time communication was achieved using Laravel Reverb for
+          WebSocket integration. I also tackled timezone-related attendance
+          issues to ensure accurate tracking across regions.
         </p>
       </div>
     ),
@@ -385,7 +786,8 @@ export const products = [
   {
     href: "http://outseller.rkmait.com/",
     title: "Out Seller landing page ",
-    description: "Out Seller is a modern, responsive landing page designed to showcase the Outsellers brand. It features a clean layout with sections for hero, services, about, and contact, all optimized for a professional online presence.",
+    description:
+      "Out Seller is a modern, responsive landing page designed to showcase the Outsellers brand. It features a clean layout with sections for hero, services, about, and contact, all optimized for a professional online presence.",
     thumbnail: landseller,
     images: [aboutseller, seller54],
     stack: ["Next", "Type Script", "Tailwindcss"],
@@ -394,34 +796,33 @@ export const products = [
       <div>
         <p>
           Key Features:
-          <br />
-          A modern, visually engaging landing page designed to present Outsellers with
-          clarity and impact. The layout includes clean sections for hero, services,
-          about, and contact, all crafted to guide the visitor smoothly through the content.
-          Fully responsive and optimized for all screen sizes.
+          <br />A modern, visually engaging landing page designed to present
+          Outsellers with clarity and impact. The layout includes clean sections
+          for hero, services, about, and contact, all crafted to guide the
+          visitor smoothly through the content. Fully responsive and optimized
+          for all screen sizes.
         </p>
         <p>
           My Role:
-          <br />
-          I designed and built the entire landing page from scratch, focusing on clean UI,
-          responsive structure, and subtle scroll-based animations to keep the user engaged.
+          <br />I designed and built the entire landing page from scratch,
+          focusing on clean UI, responsive structure, and subtle scroll-based
+          animations to keep the user engaged.
         </p>
         <p>
           Target Audience:
           <br />
-          Businesses and clients looking to understand the Outsellers brand and get in touch
-          through a professional online presence.
+          Businesses and clients looking to understand the Outsellers brand and
+          get in touch through a professional online presence.
         </p>
         <p>
           Challenges & Solutions:
           <br />
-          One challenge was achieving a consistent design across different browsers and screen
-          sizes. I utilized flexible grid layouts and tested responsiveness thoroughly to ensure
-          pixel-perfect design everywhere.
+          One challenge was achieving a consistent design across different
+          browsers and screen sizes. I utilized flexible grid layouts and tested
+          responsiveness thoroughly to ensure pixel-perfect design everywhere.
         </p>
       </div>
-    )
-    ,
+    ),
   },
   {
     href: "https://inom-techs.com/",
@@ -466,34 +867,33 @@ export const products = [
       <div>
         <p>
           Key Features:
-          <br />
-          A modern, visually engaging landing page designed to present Outsellers with
-          clarity and impact. The layout includes clean sections for hero, services,
-          about, and contact, all crafted to guide the visitor smoothly through the content.
-          Fully responsive and optimized for all screen sizes.
+          <br />A modern, visually engaging landing page designed to present
+          Outsellers with clarity and impact. The layout includes clean sections
+          for hero, services, about, and contact, all crafted to guide the
+          visitor smoothly through the content. Fully responsive and optimized
+          for all screen sizes.
         </p>
         <p>
           My Role:
-          <br />
-          I designed and built the entire landing page from scratch, focusing on clean UI,
-          responsive structure, and subtle scroll-based animations to keep the user engaged.
+          <br />I designed and built the entire landing page from scratch,
+          focusing on clean UI, responsive structure, and subtle scroll-based
+          animations to keep the user engaged.
         </p>
         <p>
           Target Audience:
           <br />
-          Businesses and clients looking to understand the Outsellers brand and get in touch
-          through a professional online presence.
+          Businesses and clients looking to understand the Outsellers brand and
+          get in touch through a professional online presence.
         </p>
         <p>
           Challenges & Solutions:
           <br />
-          One challenge was achieving a consistent design across different browsers and screen
-          sizes. I utilized flexible grid layouts and tested responsiveness thoroughly to ensure
-          pixel-perfect design everywhere.
+          One challenge was achieving a consistent design across different
+          browsers and screen sizes. I utilized flexible grid layouts and tested
+          responsiveness thoroughly to ensure pixel-perfect design everywhere.
         </p>
       </div>
-    )
-    ,
+    ),
   },
   {
     href: "http://educhains.live",
@@ -558,7 +958,7 @@ export const products = [
     thumbnail: outseller,
     images: [outseller, outseller1],
     stack: ["Laravel", "Tailwindcss"],
-    slug: "out-seller",
+    slug: "out-seller-2",
     content: (
       <div>
         <p>
