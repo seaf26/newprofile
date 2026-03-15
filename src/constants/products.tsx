@@ -101,7 +101,7 @@ export const products = [
                 <br />
                 - <em>Advanced Recursive Category Architecture:</em> Unlimited subcategory levels allowing complex taxonomies. Implemented descendant/ancestor lookups using SQL CTEs. Deep API endpoints return nested tree JSON structures up to specific depths.
                 <br />
-                - <em>Category Groups API:</em> Admin customizable "Groups" for dynamic storefront features, allowing carousels containing categories and products natively with level type mapping embedded in API responses.
+                - <em>Category Groups API:</em> Admin customizable &quot;Groups&quot; for dynamic storefront features, allowing carousels containing categories and products natively with level type mapping embedded in API responses.
                 <br />
                 - <em>Mobile App V1 API Expansion:</em> Full checkout capability, offline payments via multipart/form-data with up to 5MB screenshot uploads, campaign tracking, and robust filtering rules for items intercepting dynamic query scopes. New checkout summary engine computes live projections for coupons and loyalty points.
                 <br />
@@ -373,14 +373,14 @@ export const products = [
         <p>
           My Role & Technical Focus:
           <br />
-          Working as a Backend Developer within a large engineering team, I specialized in Laravel-side development. My primary mission was to modernize the platform by refactoring ancient legacy code, decoupling "spaghetti" logic into clean, scalable microservices, and optimizing data flow between the Laravel core and MongoDB.
+          Working as a Backend Developer within a large engineering team, I specialized in Laravel-side development. My primary mission was to modernize the platform by refactoring ancient legacy code, decoupling &quot;spaghetti&quot; logic into clean, scalable microservices, and optimizing data flow between the Laravel core and MongoDB.
           <br />
           <br />
         </p>
         <p>
           Challenges & Solutions:
           <br />
-          A major challenge in this project was navigating and modernizing an extensive, aging legacy codebase that had grown over five years. The system contained heavily entangled sections—often referred to as "spaghetti code"—making it incredibly difficult to edit or scale without breaking existing features. 
+          A major challenge in this project was navigating and modernizing an extensive, aging legacy codebase that had grown over five years. The system contained heavily entangled sections—often referred to as &quot;spaghetti code&quot;—making it incredibly difficult to edit or scale without breaking existing features. 
           <br />
           <br />
           My focus was on aggressively refactoring these critical bottlenecks. By dissecting the legacy logic and establishing clean, microservices-oriented boundaries, I successfully reduced technical debt, stabilized the architecture, and significantly improved the maintainability of the codebase for the entire team.
