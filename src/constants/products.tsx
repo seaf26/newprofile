@@ -57,6 +57,11 @@ import elnasserback from "../../public/images/elnasserback.png"
 import { title } from "process";
 
 export const products = [
+  //wiki
+  //tags
+  //jawad
+  //trades 
+  //printout
 //   elnasser - backend dashboard & logistics
   {
     href: "",
@@ -384,7 +389,7 @@ export const products = [
     ),
   },
 
-  //dental osrais
+  // 3dentix
   {
     href: "https://3dentix.com/",
     title: "3Dentix",
@@ -782,7 +787,7 @@ export const products = [
       </div>
     ),
   },
-
+  //outseller
   {
     href: "http://outseller.rkmait.com/",
     title: "Out Seller landing page ",
@@ -824,6 +829,7 @@ export const products = [
       </div>
     ),
   },
+  //inom-techs
   {
     href: "https://inom-techs.com/",
     title: "Inom Techs",
@@ -858,7 +864,7 @@ export const products = [
     href: "http://outseller.tech",
     title: "Seller-tech",
     description:
-      "Conflict Solution is a professional portfolio website designed for a law company. The website features eight distinct pages that showcase the firm's services and expertise. Built with responsiveness in mind, it ensures a seamless browsing experience across devices.",
+      "Seller-tech is a professional portfolio website designed for a law company. The website features eight distinct pages that showcase the firm's services and expertise. Built with responsiveness in mind, it ensures a seamless browsing experience across devices.",
     thumbnail: newseller,
     images: [newseller, newseller1],
     stack: ["Next", "Type Script", "Tailwindcss"],
