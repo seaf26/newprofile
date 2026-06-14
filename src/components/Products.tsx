@@ -54,14 +54,14 @@ export const Products = () => {
               <Link
                 href={product.slug ? `/projects/${product.slug}` : product.href}
                 key={product.href}
-                className="group grid gap-5 rounded-2xl p-3 transition duration-200 hover:bg-gray-50 md:grid-cols-[15rem_minmax(0,1fr)] md:gap-6"
+                className="group grid gap-5 rounded-2xl p-3 transition duration-200 hover:bg-gray-50 md:grid-cols-[18rem_minmax(0,1fr)] md:gap-6"
               >
-                <div className="flex h-64 w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100 md:h-64 md:w-60">
+                <div className="flex h-64 w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-100 bg-neutral-50 p-2 md:h-56 md:w-72">
                   <div
                     className={
                       portraitThumbnail
                         ? "relative h-full w-[7.4rem] overflow-hidden rounded-[1.35rem] bg-white shadow-sm ring-1 ring-black/10 md:w-[7.5rem]"
-                        : "relative h-full w-full overflow-hidden rounded-xl"
+                        : "relative h-full w-full overflow-hidden rounded-lg bg-white"
                     }
                   >
                     <Image
@@ -75,8 +75,8 @@ export const Products = () => {
                       }
                       className={
                         portraitThumbnail
-                          ? "object-cover object-top transition duration-200 ease-out group-hover:scale-[1.02]"
-                          : "object-cover object-top transition duration-200 ease-out group-hover:scale-[1.02]"
+                          ? "object-contain object-center transition duration-200 ease-out group-hover:scale-[1.02]"
+                          : "object-contain object-center transition duration-200 ease-out group-hover:scale-[1.02]"
                       }
                     />
                   </div>
