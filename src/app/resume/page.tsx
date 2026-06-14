@@ -1,24 +1,19 @@
 import { Container } from "@/components/Container";
-import DownloadCv from "@/components/DownloadCv";
 import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
 import { WorkHistory } from "@/components/WorkHistory";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <Container >
       <span className="text-4xl">💼</span>
-      <Heading className="font-black">Work History</Heading>
+      <Heading className="font-black">Professional Experience</Heading>
       <Paragraph className="max-w-xl mt-4">
-        I&apos;m a full-stack developer that loves{" "}
-        <Highlight>building products</Highlight> and web apps that can impact
-        millions of lives
+        Full-stack experience across{" "}
+        <Highlight>Laravel APIs, React/Next.js dashboards, ecommerce, delivery, and mobile app backends</Highlight>.
       </Paragraph>
       <WorkHistory />
-      {/* <DownloadCv /> */}
     </Container>
   );
 }
