@@ -14,6 +14,12 @@ const featuredMobileSlugs = [
   "jawad-horse-riding-booking-platform",
 ];
 
+const isPortraitThumbnail = (thumbnail: Product["thumbnail"]) =>
+  typeof thumbnail === "object" &&
+  "height" in thumbnail &&
+  "width" in thumbnail &&
+  thumbnail.height > thumbnail.width;
+
 export const Products = () => {
   const sortedProducts = [...products].sort((a, b) => {
     const aIndex = featuredMobileSlugs.indexOf(a.slug ?? "");
@@ -29,54 +35,74 @@ export const Products = () => {
   const content = (
     <div>
       <div className="grid grid-cols-1  gap-10">
-        {sortedProducts.map((product: Product, idx: number) => (
-          <motion.div
-            key={product.href}
-            initial={{
-              opacity: 0,
-              x: -50,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{ duration: 0.2, delay: idx * 0.1 }}
-          >
-            <Link
-              href={product.slug ? `/projects/${product.slug}` : product.href}
+        {sortedProducts.map((product: Product, idx: number) => {
+          const portraitThumbnail = isPortraitThumbnail(product.thumbnail);
+
+          return (
+            <motion.div
               key={product.href}
-              className="group grid gap-4 rounded-2xl p-3 transition duration-200 hover:bg-gray-50 md:grid-cols-[13rem_minmax(0,1fr)] md:gap-5"
+              initial={{
+                opacity: 0,
+                x: -50,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 0.2, delay: idx * 0.1 }}
             >
-              <div className="relative h-56 w-full overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100 md:h-40 md:w-52">
-                <Image
-                  src={product.thumbnail}
-                  alt={`${product.title} thumbnail`}
-                  fill
-                  sizes="(min-width: 768px) 208px, 100vw"
-                  className="object-cover object-top transition duration-200 ease-out group-hover:scale-[1.02]"
-                />
-              </div>
-              <div className="flex flex-col justify-between">
-                <div>
-                  <Heading
-                    as="h4"
-                    className="font-black text-lg md:text-lg lg:text-lg "
+              <Link
+                href={product.slug ? `/projects/${product.slug}` : product.href}
+                key={product.href}
+                className="group grid gap-5 rounded-2xl p-3 transition duration-200 hover:bg-gray-50 md:grid-cols-[15rem_minmax(0,1fr)] md:gap-6"
+              >
+                <div className="flex h-64 w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100 md:h-64 md:w-60">
+                  <div
+                    className={
+                      portraitThumbnail
+                        ? "relative h-full w-[7.4rem] overflow-hidden rounded-[1.35rem] bg-white shadow-sm ring-1 ring-black/10 md:w-[7.5rem]"
+                        : "relative h-full w-full overflow-hidden rounded-xl"
+                    }
                   >
-                    {product.title}
-                  </Heading>
-                  <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
-                    {product.description}
-                  </Paragraph>
+                    <Image
+                      src={product.thumbnail}
+                      alt={`${product.title} thumbnail`}
+                      fill
+                      sizes={
+                        portraitThumbnail
+                          ? "(min-width: 768px) 120px, 120px"
+                          : "(min-width: 768px) 240px, 100vw"
+                      }
+                      className={
+                        portraitThumbnail
+                          ? "object-cover object-top transition duration-200 ease-out group-hover:scale-[1.02]"
+                          : "object-cover object-top transition duration-200 ease-out group-hover:scale-[1.02]"
+                      }
+                    />
+                  </div>
                 </div>
-                <StackBadges
-                  stack={product.stack}
-                  compact
-                  className="mt-3 md:mb-1 md:mt-4"
-                />
-              </div>
-            </Link>
-          </motion.div>
-        ))}
+                <div className="flex min-w-0 flex-col justify-center">
+                  <div>
+                    <Heading
+                      as="h4"
+                      className="font-black text-lg md:text-lg lg:text-lg "
+                    >
+                      {product.title}
+                    </Heading>
+                    <Paragraph className="text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
+                      {product.description}
+                    </Paragraph>
+                  </div>
+                  <StackBadges
+                    stack={product.stack}
+                    compact
+                    className="mt-4"
+                  />
+                </div>
+              </Link>
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );
