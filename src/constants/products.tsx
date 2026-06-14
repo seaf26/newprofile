@@ -42,22 +42,367 @@ import polrais from "../../public/images/polraismarine.png";
 import polraismarien from "../../public/images/polraismarine2.png";
 import dental1 from "../../public/images/dental.png";
 import dental2 from "../../public/images/dentalosrais2.png";
-import kemedar from "../../public/images/kemedar.png";
-import ar2 from "../../public/images/ar2.png";
-import ar from "../../public/images/ar.png";
-import medad from "../../public/images/medad.png";
-import medad2 from "../../public/images/medad2.png";
-import igc from "../../public/images/igc.png";
-import igc2 from "../../public/images/igc2.png";
-import alnasser from "../../public/images/alnasser.png"
-import elnasserback from "../../public/images/elnasserback.png"
-
-
-
-import { title } from "process";
+import kemedar from "../../public/images/kemedar.webp";
+import ar2 from "../../public/images/ar2.webp";
+import ar from "../../public/images/ar.webp";
+import medad from "../../public/images/medad.webp";
+import medad2 from "../../public/images/medad2.webp";
+import igc from "../../public/images/igc.webp";
+import igc2 from "../../public/images/igc2.webp";
+import alnasser from "../../public/images/alnasser.webp";
+import elnasserback from "../../public/images/elnasserback.webp";
+import wikifood from "../../public/images/wikifood.webp";
+import printout from "../../public/images/printoutt.webp";
+import taggz from "../../public/images/taggz.webp";
+import jawad from "../../public/images/jawad.webp";
 
 export const products = [
   //wiki
+  {
+    href: "https://web-js-three.vercel.app/home",
+    title: "WikiFood Multi-Vendor Commerce Backend",
+    description:
+      "A full-stack Laravel 10 backend and API platform powering a multi-vendor ecommerce web app plus three mobile apps for vendors, customers, and delivery operations.",
+    thumbnail: wikifood,
+    images: [wikifood],
+    stack: [
+      "Laravel 10",
+      "PHP 8.2",
+      "MySQL",
+      "REST APIs",
+      "Laravel Passport",
+      "Firebase",
+      "WebSockets",
+      "Laravel Mix",
+    ],
+    slug: "wikifood-commerce-delivery-backend",
+    content: (
+      <div className="space-y-6">
+        <p>
+          <strong>Project Overview</strong>
+          <br />
+          WikiFood is a large-scale multi-vendor commerce and delivery
+          management platform built for food, grocery, pharmacy, ecommerce, and
+          parcel operations. I developed and customized the Laravel backend that
+          powers the ecommerce web app and three connected mobile apps: vendor,
+          customer ecommerce, and delivery.
+        </p>
+        <p>
+          <strong>Backend & API Scope</strong>
+          <br />
+          Built and maintained modules for orders, sub-orders, POS workflows,
+          products, vendors, customers, deliverymen, warehouses, stock, coupons,
+          campaigns, banners, advertisements, subscriptions, wallets,
+          disbursements, reports, and tax/VAT operations. The API layer supports
+          authentication, cart, checkout, order tracking, wallet flows, loyalty
+          points, notifications, chat, reviews, location tracking, and delivery
+          status updates across the mobile and web ecosystem.
+        </p>
+        <p>
+          <strong>Commerce Operations</strong>
+          <br />
+          Implemented admin and vendor POS workflows with item-level percentage
+          discounts, purchase-price validation, tax recalculation, order editing,
+          and stock-safe order placement. Enhanced order management with
+          parent/sub-order tracking, cancellation APIs, stock restoration, inline
+          filters, pagination, scroll memory, receipt hash updates, and accurate
+          parent-order totals.
+        </p>
+        <p>
+          <strong>Imports, Payments & Promotions</strong>
+          <br />
+          Built advanced Excel, Fodex, and Wiki import tools with dynamic column
+          mapping, editable previews, create/update detection, stock conversion
+          logic, warehouse-aware validation, and safer bulk product/order
+          importing. Integrated and maintained payment gateways including Stripe,
+          PayPal, Razorpay, Paystack, Flutterwave, Paymob, Paytabs,
+          MercadoPago, SSLCommerz, Bkash, LiqPay, SenangPay, Paytm, PhonePe,
+          and Xendit.
+        </p>
+        <p>
+          <strong>Operational Tooling</strong>
+          <br />
+          Added promotional systems for store, category, and item
+          advertisements, redirect metadata, campaigns, flash sales, cashback,
+          coupons, banners, and global brand support. Improved catalog
+          management with bulk actions, product galleries, brand filtering,
+          warehouse stock handling, always-in-stock logic, variations, add-ons,
+          suppliers, units, attributes, and product approval flows. Built
+          activity logging, role/module permissions, admin access control,
+          exports, wallet transactions, withdrawal methods, deliveryman
+          earnings, and tax reports.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://printout.solutions/",
+    title: "Printout Backend | Laravel REST API",
+    description:
+      "A Laravel 10 REST API backend for an online printing and delivery platform connecting clients, admins, vendors, and delivery drivers through separate app modules.",
+    thumbnail: printout,
+    images: [printout],
+    stack: [
+      "Laravel 10",
+      "PHP",
+      "MySQL",
+      "JWT Auth",
+      "Sanctum",
+      "Spatie Media",
+      "Firebase",
+      "Paymob",
+      "Pusher",
+      "PDF Parser",
+      "Imagick",
+      "REST APIs",
+    ],
+    slug: "printout-laravel-rest-api",
+    content: (
+      <div className="space-y-6">
+        <p>
+          <strong>Project Overview</strong>
+          <br />
+          Printout is an online printing and delivery platform that connects
+          customers, admins, vendors, and delivery drivers through dedicated API
+          modules. I developed the Laravel backend powering custom print orders,
+          product catalogs, cart management, file uploads, payments, delivery
+          tracking, real-time communication, and admin reporting.
+        </p>
+        <p>
+          <strong>Authentication & App APIs</strong>
+          <br />
+          Built REST APIs for the client app, admin dashboard, vendor portal,
+          and delivery app. Implemented multi-guard JWT authentication for
+          clients, admins, vendors, and delivery users, with OTP verification
+          through email/SMS, password reset, social login, and FCM token
+          handling.
+        </p>
+        <p>
+          <strong>Print Ordering & Pricing</strong>
+          <br />
+          Developed custom print flows for documents, banners, uploaded files,
+          PDFs, images, and Google Drive links. Implemented dynamic pricing for
+          paper type, size, quantity, pages, selected page ranges, banner
+          dimensions, materials, and customizations. Built cart and checkout
+          systems for authenticated users and guests using guest tokens.
+        </p>
+        <p>
+          <strong>Payments, Files & Order Lifecycle</strong>
+          <br />
+          Integrated Paymob payment intentions, cash/deposit payments, guest
+          checkout, coupons, and order total calculation. Added PDF validation
+          and preview generation with page-count limits, file-size limits, and
+          memory-safe PDF-to-image conversion. Implemented order creation,
+          status updates, vendor assignment, delivery assignment, reviews,
+          ratings, uploaded files, and media handling.
+        </p>
+        <p>
+          <strong>Operations, Delivery & Reporting</strong>
+          <br />
+          Built delivery APIs for order acceptance, current/completed orders,
+          arrival confirmation, unreachable reports, wallet calculations,
+          location updates, and delivery ratings. Added vendor APIs for product
+          assignment, vendor orders, order details, profile updates, and
+          production workflow updates. Implemented real-time chat using private
+          broadcast channels, Firebase push notifications, loyalty points,
+          referral rewards, vouchers, coupon usage tracking, and admin reports
+          for production, financial performance, delivery logistics, revenue,
+          cost, profit margin, and delivery timing.
+        </p>
+        <p>
+          <strong>Backend Tooling</strong>
+          <br />
+          Used Spatie Media Library for file/media management, Spatie
+          Permissions for roles and permissions, and Laravel localization for
+          multilingual catalog data. Added unit tests for PDF validation, PDF
+          configuration, upload limits, and structured PDF error handling.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://apps.apple.com/eg/app/taggz/id6504503293",
+    title: "Taggz AI Event Photography Platform",
+    description:
+      "A full-stack AI event photography platform with a Laravel API backend and a Next.js admin dashboard for events, media workflows, payments, analytics, moderation, and permissions.",
+    thumbnail: taggz,
+    images: [taggz],
+    stack: [
+      "Laravel 13",
+      "PHP 8.3",
+      "Sanctum",
+      "Spatie Permission",
+      "Stripe",
+      "Paymob",
+      "Firebase FCM",
+      "S3/B2 Storage",
+      "tusd",
+      "Docker",
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI",
+      "TanStack Query",
+      "NextAuth v5",
+      "Zustand",
+      "Recharts",
+      "Framer Motion",
+      "GSAP",
+      "Vitest",
+    ],
+    slug: "taggz-ai-event-photography-platform",
+    content: (
+      <div className="space-y-6">
+        <p>
+          <strong>Project Overview</strong>
+          <br />
+          Taggz is an AI-powered event photography and photo-sharing platform
+          with a Laravel API backend, a Next.js dashboard, and a mobile app on
+          the Apple App Store. The system supports event creation, role-based
+          hosting, attendee management, AI face matching, scalable media
+          uploads, subscriptions, payments, analytics, moderation,
+          notifications, and admin operations.
+        </p>
+        <p>
+          <strong>Backend API</strong>
+          <br />
+          Developed the Laravel backend API with Sanctum authentication,
+          role-based permissions, AI photo processing workflows, payment
+          integrations, and scalable media upload infrastructure. Built RESTful
+          APIs for authentication, social login, OTP email verification,
+          password reset, user profiles, account management, Firebase push
+          notifications, notification preferences, support issues, and device
+          token management.
+        </p>
+        <p>
+          <strong>Events, Roles & Photo Workflows</strong>
+          <br />
+          Implemented event management with public/private events, hosts,
+          co-hosts, moderators, invitations, ownership transfer, QR/code
+          joining, attendee check-in, and event groups. Developed advanced photo
+          workflows including direct uploads, batch uploads, multipart uploads,
+          ZIP uploads, resumable tus uploads, folders, favorites, reports,
+          share links, and download tracking.
+        </p>
+        <p>
+          <strong>AI, Payments & Admin Operations</strong>
+          <br />
+          Integrated AI photo indexing and face matching through internal
+          callback APIs, face enrollment, user-photo matches, and retroactive
+          matching jobs. Added monetization features including event packages,
+          subscriptions, package tiers, upgrade requests, recurring billing,
+          download entitlements, Stripe, Paymob, webhooks, receipts, refunds,
+          and billing history. Built admin features for banning, event flagging
+          and archive, moderation queues, photo approval/rejection, analytics,
+          audit logs, Telegram notifications, subscription settings, scheduled
+          commands, queue jobs, Docker deployment files, and automated feature
+          tests.
+        </p>
+        <p>
+          <strong>Next.js Dashboard</strong>
+          <br />
+          Developed a protected dashboard using Next.js App Router, NextAuth,
+          role-based access guards, and reusable dashboard shell navigation.
+          Built event screens for listing, creating, editing, publishing,
+          cancelling, completing, deleting, grouping, and viewing detailed event
+          data. Added event detail tabs for overview, photos, members,
+          analytics, and subscriptions, with grid, list, and advanced views.
+        </p>
+        <p>
+          <strong>Dashboard Product Surface</strong>
+          <br />
+          Implemented photo management with upload monitoring, photo detail
+          pages, lightbox viewing, favorites, deletion, retry flows, moderation
+          reporting, and tus upload support. Built member management, package
+          tiers, pricing rules, upgrade requests, inquiries, expiry views,
+          billing console tabs, KPI cards, charts, revenue analytics, event
+          metrics, photo metrics, audit logs, payment transactions,
+          subscriptions, payout views, Telegram/admin notification settings, and
+          admin subscription rules.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://play.google.com/store/apps/details?id=com.JAWAD&pli=1",
+    title: "JAWAD Horse Riding Booking Platform",
+    description:
+      "A cross-platform React Native booking marketplace for horse riding experiences in Egypt, connecting riders with stables, horses, events, schools, and photographers.",
+    thumbnail: jawad,
+    images: [jawad],
+    stack: [
+      "React Native",
+      "TypeScript",
+      "React Navigation",
+      "React Query",
+      "Axios",
+      "Zustand",
+      "AsyncStorage",
+      "Firebase FCM",
+      "i18next",
+      "React Hook Form",
+      "Zod",
+      "NativeWind",
+      "React Native Maps",
+      "WebView",
+      "Image Picker",
+      "Xcode",
+      "CocoaPods",
+      "Android Gradle",
+    ],
+    slug: "jawad-horse-riding-booking-platform",
+    content: (
+      <div className="space-y-6">
+        <p>
+          <strong>Project Overview</strong>
+          <br />
+          JAWAD is a full-featured equestrian booking marketplace built with
+          React Native. It lets riders browse verified stables, horses, events,
+          schools, and photographers, then book experiences through a guided
+          checkout flow with coupons, payment handling, and booking history.
+        </p>
+        <p>
+          <strong>Mobile App Experience</strong>
+          <br />
+          Developed the iOS and Android app for discovering, booking, and
+          managing horse riding experiences, events, schools, and photography
+          sessions. Built client login, registration, OTP, password reset, Apple
+          Sign-In, Google Sign-In, guest browsing, profile editing, contact us,
+          terms/about pages, booking history, booking details, and saved/favorite
+          horse flows.
+        </p>
+        <p>
+          <strong>Roles, Booking & Checkout</strong>
+          <br />
+          Implemented multi-role authentication for clients, stable owners,
+          photographers, and schools, with role-based navigation and dashboards.
+          Built booking flows for horses, events, and photo sessions, including
+          cart management, coupons, checkout steps, payment WebView integration,
+          refund/check booking status flows, and deep linking to booking history
+          and horse details.
+        </p>
+        <p>
+          <strong>Business Management</strong>
+          <br />
+          Created business-side tools for stable owners, photographers, and
+          schools to manage profiles, services, horses, bookings, and visibility.
+          Added horse creation/editing, stable profile completion, photographer
+          management, image upload, and business profile completion flows.
+        </p>
+        <p>
+          <strong>Localization & Native Delivery</strong>
+          <br />
+          Added bilingual Arabic/English localization with RTL support, dynamic
+          language switching, localized onboarding/content, Firebase push
+          notification token handling, and persistent auth/session storage.
+          Worked on native iOS App Store readiness, including App Intents/deep
+          links, URL schemes, simulator builds, CocoaPods, Android Gradle, and
+          App Store review journey preparation.
+        </p>
+      </div>
+    ),
+  },
   //tags
   //jawad
   //trades 

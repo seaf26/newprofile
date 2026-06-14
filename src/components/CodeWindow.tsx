@@ -9,7 +9,8 @@ export const CodeWindow = ({ title, children }: any) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    const id = window.requestAnimationFrame(() => setIsClient(true));
+    return () => window.cancelAnimationFrame(id);
   }, []);
   useEffect(() => {
     // Prism.highlightAll();

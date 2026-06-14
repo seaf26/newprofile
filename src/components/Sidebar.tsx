@@ -4,7 +4,7 @@ import { Navlink } from "@/types/navlink";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Heading } from "./Heading";
 import { socials } from "@/constants/socials";
@@ -14,25 +14,34 @@ import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
 import Seaf from "../../public/images/seaf1.jpg";
 
+const getInitialLocale = () => {
+  if (typeof document === "undefined") {
+    return "";
+  }
+
+  const cookieLocale = document.cookie
+    .split(";")
+    .find((row) => row.trim().startsWith("MYNEXTAPP_LOCALE="))
+    ?.split("=")[1];
+
+  return cookieLocale || navigator.language.slice(0, 2);
+};
+
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
-  const [locale, setLocale] = useState<string>("");
+  const [locale, setLocale] = useState<string>(getInitialLocale);
   const router = useRouter();
 
   useEffect(() => {
-    const cookieLocale = document.cookie
+    const hasLocaleCookie = document.cookie
       .split(";")
-      .find((row) => row.trim().startsWith("MYNEXTAPP_LOCALE="))
-      ?.split("=")[1];
-    if (cookieLocale) {
-      setLocale(cookieLocale);
-    } else {
-      const browserLocale = navigator.language.slice(0, 2);
-      setLocale(browserLocale);
-      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale}`;
+      .some((row) => row.trim().startsWith("MYNEXTAPP_LOCALE="));
+
+    if (!hasLocaleCookie && locale) {
+      document.cookie = `MYNEXTAPP_LOCALE=${locale}`;
       router.refresh();
     }
-  }, [router]);
+  }, [locale, router]);
 
   const handleLocale = (newLocale: string) => {
     setLocale(newLocale);

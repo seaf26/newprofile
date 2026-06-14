@@ -5,15 +5,31 @@ import { Product } from "@/types/products";
 import { products } from "@/constants/products";
 import Link from "next/link";
 import Image from "next/image";
-import { generateKeys } from "@/utils/generateKeys";
 import { Paragraph } from "./Paragraph";
 import { motion } from "framer-motion";
+import { StackBadges } from "./StackBadges";
+
+const featuredMobileSlugs = [
+  "taggz-ai-event-photography-platform",
+  "jawad-horse-riding-booking-platform",
+];
 
 export const Products = () => {
+  const sortedProducts = [...products].sort((a, b) => {
+    const aIndex = featuredMobileSlugs.indexOf(a.slug ?? "");
+    const bIndex = featuredMobileSlugs.indexOf(b.slug ?? "");
+
+    if (aIndex === -1 && bIndex === -1) return 0;
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+
+    return aIndex - bIndex;
+  });
+
   const content = (
     <div>
       <div className="grid grid-cols-1  gap-10">
-        {products.map((product: Product, idx: number) => (
+        {sortedProducts.map((product: Product, idx: number) => (
           <motion.div
             key={product.href}
             initial={{
@@ -29,15 +45,17 @@ export const Products = () => {
             <Link
               href={product.slug ? `/projects/${product.slug}` : product.href}
               key={product.href}
-              className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 rounded-2xl transition duration-200 pt-4"
+              className="group grid gap-4 rounded-2xl p-3 transition duration-200 hover:bg-gray-50 md:grid-cols-[13rem_minmax(0,1fr)] md:gap-5"
             >
-              <Image
-                src={product.thumbnail}
-                alt="thumbnail"
-                height="200"
-                width="200"
-                className="rounded-md"
-              />
+              <div className="relative h-56 w-full overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100 md:h-40 md:w-52">
+                <Image
+                  src={product.thumbnail}
+                  alt={`${product.title} thumbnail`}
+                  fill
+                  sizes="(min-width: 768px) 208px, 100vw"
+                  className="object-cover object-top transition duration-200 ease-out group-hover:scale-[1.02]"
+                />
+              </div>
               <div className="flex flex-col justify-between">
                 <div>
                   <Heading
@@ -50,16 +68,11 @@ export const Products = () => {
                     {product.description}
                   </Paragraph>
                 </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
-                  {product.stack?.map((stack: string) => (
-                    <span
-                      key={stack}
-                      className="text-xs  md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
-                    >
-                      {stack}
-                    </span>
-                  ))}
-                </div>
+                <StackBadges
+                  stack={product.stack}
+                  compact
+                  className="mt-3 md:mb-1 md:mt-4"
+                />
               </div>
             </Link>
           </motion.div>
@@ -67,7 +80,5 @@ export const Products = () => {
       </div>
     </div>
   );
-  const keys = generateKeys(content);
-  // console.log("keys: ", JSON.stringify(keys, null, 2)); // Properly log the keys
   return <>{content}</>;
 };

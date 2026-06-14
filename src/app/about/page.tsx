@@ -9,11 +9,11 @@ import seaf from "../../../public/images/sseaf.jpg"
 
 import { motion } from "framer-motion";
 import About from "@/components/About";
+import { siteDescription } from "@/constants/metadata";
 
 export const metadata: Metadata = {
-  title: "About | Seaf Gamel",
-  description:
-  " Seaf Gamel is a Full-Stack Developer, Coach and Instructor. He is a passionate tech enthusiast who builds and develops websites while exploring new places and embracing the freedom of working remotely.",
+  title: "About",
+  description: siteDescription,
 };
 
 export default function AboutPage() {

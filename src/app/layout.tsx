@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { siteDescription, siteTitle } from "@/constants/metadata";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,9 +14,45 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Seaf Gamel - Developer",
-  description:
-    " Seaf Gamel is a Full-Stack Developer, Coach and Instructor. He is a passionate tech enthusiast who builds and develops websites while exploring new places and embracing the freedom of working remotely.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://newprofile.vercel.app"
+  ),
+  title: {
+    default: siteTitle,
+    template: "%s | Saif Mohamed Jamil",
+  },
+  description: siteDescription,
+  keywords: [
+    "Saif Mohamed Jamil",
+    "Seaf Gamel",
+    "Full-Stack Developer",
+    "Laravel Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Ecommerce Developer",
+    "API Developer",
+  ],
+  authors: [{ name: "Saif Mohamed Jamil" }],
+  creator: "Saif Mohamed Jamil",
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    type: "website",
+    images: [
+      {
+        url: "/images/seaf1.jpg",
+        width: 960,
+        height: 960,
+        alt: "Saif Mohamed Jamil",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/images/seaf1.jpg"],
+  },
 };
 
 export default async function RootLayout({

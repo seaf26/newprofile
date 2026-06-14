@@ -6,9 +6,6 @@ import { Paragraph } from "@/components/Paragraph";
 import { Products } from "@/components/Products";
 import { TechStack } from "@/components/TechStack";
 import { useTranslations } from "next-intl";
-import { generateKeys } from "@/utils/generateKeys";
-
-import Image from "next/image";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -34,9 +31,4 @@ export default function Home() {
       <TechStack />
     </Container>
   );
-  
-  // const keys = generateKeys(content);
-  // console.log("keys: ", JSON.stringify(keys, null, 2)); // Properly log the keys
-
-
 }

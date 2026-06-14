@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 import nextMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
-import rehypePrism from "@mapbox/rehype-prism";
+import rehypePrism from "rehype-prism-plus";
 import createNextIntlPlugin from 'next-intl/plugin';
 
 
@@ -10,12 +10,17 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
   images: {
-    domains: ["images.unsplash.com", "res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
   },
-  experimental: {
-    mdxRs: true,
-  },
-
 };
 
 const withMDX = nextMDX({

@@ -2,15 +2,14 @@ import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
 import { getAllBlogs } from "../../../lib/getAllBlogs";
 import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
+import { siteDescription } from "@/constants/metadata";
 
 export const metadata: Metadata = {
-  title: "Blogs | Seaf Gamel",
-  description:
-  " Seaf Gamel is a Full-Stack Developer, Coach and Instructor. He is a passionate tech enthusiast who builds and develops websites while exploring new places and embracing the freedom of working remotely.",
+  title: "Blogs",
+  description: siteDescription,
 };
 
 export default async function Blog() {

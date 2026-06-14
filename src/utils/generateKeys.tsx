@@ -7,9 +7,10 @@ export function generateKeys(element: React.ReactNode, prefix = ''): Record<stri
     if (typeof node === 'string' || typeof node === 'number') {
       const key = currentPrefix || 'text';
       keys[key] = String(node);
-    } else if (React.isValidElement(node)) {
+    } else if (React.isValidElement<{ children?: React.ReactNode }>(node)) {
       const children = node.props.children;
-      const componentName = typeof node.type === 'string' ? node.type : node.type.name || 'Component';
+      const componentName =
+        typeof node.type === 'string' ? node.type : node.type.name || 'Component';
       const newPrefix = currentPrefix ? `${currentPrefix}.${componentName}` : componentName;
 
       if (Array.isArray(children)) {
